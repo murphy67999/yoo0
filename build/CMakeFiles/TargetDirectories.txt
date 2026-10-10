@@ -1,0 +1,3 @@
+/home/mirak/Documents/yoo0/build/CMakeFiles/yoo0.dir
+/home/mirak/Documents/yoo0/build/CMakeFiles/edit_cache.dir
+/home/mirak/Documents/yoo0/build/CMakeFiles/rebuild_cache.dir

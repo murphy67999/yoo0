@@ -1,0 +1,26 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/yoo0.dir/link.d"
+  "CMakeFiles/yoo0.dir/src/Bullet.cpp.o"
+  "CMakeFiles/yoo0.dir/src/Bullet.cpp.o.d"
+  "CMakeFiles/yoo0.dir/src/Button.cpp.o"
+  "CMakeFiles/yoo0.dir/src/Button.cpp.o.d"
+  "CMakeFiles/yoo0.dir/src/Game.cpp.o"
+  "CMakeFiles/yoo0.dir/src/Game.cpp.o.d"
+  "CMakeFiles/yoo0.dir/src/Gun.cpp.o"
+  "CMakeFiles/yoo0.dir/src/Gun.cpp.o.d"
+  "CMakeFiles/yoo0.dir/src/Menu.cpp.o"
+  "CMakeFiles/yoo0.dir/src/Menu.cpp.o.d"
+  "CMakeFiles/yoo0.dir/src/Player.cpp.o"
+  "CMakeFiles/yoo0.dir/src/Player.cpp.o.d"
+  "CMakeFiles/yoo0.dir/src/Red.cpp.o"
+  "CMakeFiles/yoo0.dir/src/Red.cpp.o.d"
+  "CMakeFiles/yoo0.dir/src/main.cpp.o"
+  "CMakeFiles/yoo0.dir/src/main.cpp.o.d"
+  "yoo0"
+  "yoo0.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/yoo0.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
