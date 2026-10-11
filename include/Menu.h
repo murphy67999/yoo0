@@ -5,6 +5,7 @@
 
 struct Menu{
 	Button play;
+    Button exit;
 
     void init();
     void update(Screen& currentScreen);

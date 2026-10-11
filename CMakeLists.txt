@@ -13,6 +13,7 @@ add_executable(yoo0
 	src/Game.cpp
 	src/Menu.cpp
 	src/Button.cpp
+	src/Death.cpp
 )
 
 target_include_directories(yoo0 PRIVATE

@@ -185,13 +185,14 @@ CMakeFiles/yoo0.dir/src/Game.cpp.o: \
  /usr/include/c++/14/bits/basic_ios.tcc \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
  /usr/include/c++/14/bits/istream.tcc \
- /home/mirak/Documents/yoo0/include/Game.h \
- /home/mirak/Documents/yoo0/include/Player.h \
- /home/mirak/Documents/yoo0/include/Gun.h /usr/include/c++/14/vector \
+ /home/mirak/Documents/yoo0/include/Game.h /usr/include/c++/14/vector \
  /usr/include/c++/14/bits/stl_uninitialized.h \
  /usr/include/c++/14/bits/stl_vector.h \
  /usr/include/c++/14/bits/stl_bvector.h \
  /usr/include/c++/14/bits/vector.tcc \
+ /home/mirak/Documents/yoo0/include/Player.h \
+ /home/mirak/Documents/yoo0/include/Gun.h \
  /home/mirak/Documents/yoo0/include/Bullet.h \
  /home/mirak/Documents/yoo0/include/Red.h \
- /home/mirak/Documents/yoo0/include/Green.h
+ /home/mirak/Documents/yoo0/include/Green.h \
+ /home/mirak/Documents/yoo0/include/Screen.h

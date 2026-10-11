@@ -4,32 +4,31 @@
 
 #include "Game.h"
 #include "Gun.h"
+#include "Screen.h"
 
 void Game::init(){
 	player.gun = Gun();
 }
 
-void Game::update(){
+void Game::update(Screen& currentScreen){
 	player.update();
 	player.gun.update(player.pos, GetMousePosition());
-	for (Bullet& bullet : bullets){
-		bullet.update();
-	}
-	for (Red& red : redEnemies){
-		red.update(player.pos);
-	}
-	for (Green& green : greenEnemies){
-		green.gun.update(green.pos, player.pos);
-		green.gun.shoot(player.pos, bullets);
-	}
+
+	updateBullets();
+	updateEnemies();
 
 	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
 		player.gun.shoot(GetMousePosition(), bullets);
 	}
 
-	spawnEnemy();
-	checkCollisions();
-	cleanup();
+	if (isPlayerHit()){
+		reset();
+		currentScreen = DEATH;
+	}
+
+	handleEnemySpawning();
+	handleEnemyHits();
+	removeDeadObjects();
 }
 
 void Game::draw(){
@@ -52,7 +51,23 @@ void Game::draw(){
 	}
 }
 
-void Game::spawnEnemy(){
+void Game::updateBullets(){
+	for (Bullet& bullet : bullets){
+		bullet.update();
+	}
+}
+
+void Game::updateEnemies(){
+	for (Red& red : redEnemies){
+		red.update(player.pos);
+	}
+	for (Green& green : greenEnemies){
+		green.gun.update(green.pos, player.pos);
+		green.gun.shoot(player.pos, bullets);
+	}
+}
+
+void Game::handleEnemySpawning(){
 	timer += GetFrameTime();
 	if (timer >= 2.0f){
 		timer = 0.0f;
@@ -84,8 +99,32 @@ void Game::spawnEnemy(){
 	}
 }
 
-void Game::checkCollisions(){
+bool Game::isPlayerHit(){
+	for (Bullet& Bullet : bullets){
+		if (CheckCollisionCircles(
+			player.pos, player.radius,
+			Bullet.pos, Bullet.radius
+		)){
+			return true;
+		}
+	}
+
+	for (const Red& red : redEnemies){
+		if (CheckCollisionCircles(
+			player.pos, player.radius,
+			red.pos, red.radius
+		)){
+			return true;
+		}
+	}
+
+	return false;
+}
+
+void Game::handleEnemyHits(){
 	for (Bullet& bullet : bullets){
+		if (!bullet.isAlive) continue;
+
 		for (Red& red : redEnemies){
 			if (CheckCollisionCircles(
 				bullet.pos, bullet.radius,
@@ -109,17 +148,10 @@ void Game::checkCollisions(){
 				break;
 			}
 		}
-
-		if (CheckCollisionCircles(
-			bullet.pos, bullet.radius,
-			player.pos, player.radius
-			)){
-			std::cout << "Player died\n";	
-		}
 	}
 }
 
-void Game::cleanup(){
+void Game::removeDeadObjects(){
 	for (int i = bullets.size() - 1; i >= 0; i--){
 		if (!bullets[i].isAlive){
 			bullets.erase(bullets.begin() + i);
@@ -135,4 +167,12 @@ void Game::cleanup(){
 			greenEnemies.erase(greenEnemies.begin() + i);
 		}
 	}
+}
+
+void Game::reset(){
+	bullets.clear();
+	redEnemies.clear();
+	greenEnemies.clear();
+
+	player.pos = player.spawnPos;
 }

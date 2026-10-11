@@ -113,6 +113,13 @@ CMakeFiles/yoo0.dir/src/Button.cpp.o: /home/mirak/Documents/yoo0/src/Button.cpp 
   /usr/include/stdc-predef.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h
 
+CMakeFiles/yoo0.dir/src/Death.cpp.o: /home/mirak/Documents/yoo0/src/Death.cpp \
+  /home/mirak/Documents/yoo0/include/Button.h \
+  /home/mirak/Documents/yoo0/include/Death.h \
+  /home/mirak/Documents/yoo0/raylib/include/raylib.h \
+  /usr/include/stdc-predef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h
+
 CMakeFiles/yoo0.dir/src/Game.cpp.o: /home/mirak/Documents/yoo0/src/Game.cpp \
   /home/mirak/Documents/yoo0/include/Bullet.h \
   /home/mirak/Documents/yoo0/include/Game.h \
@@ -120,6 +127,7 @@ CMakeFiles/yoo0.dir/src/Game.cpp.o: /home/mirak/Documents/yoo0/src/Game.cpp \
   /home/mirak/Documents/yoo0/include/Gun.h \
   /home/mirak/Documents/yoo0/include/Player.h \
   /home/mirak/Documents/yoo0/include/Red.h \
+  /home/mirak/Documents/yoo0/include/Screen.h \
   /home/mirak/Documents/yoo0/raylib/include/raylib.h \
   /home/mirak/Documents/yoo0/raylib/include/raymath.h \
   /usr/include/alloca.h \
@@ -491,6 +499,7 @@ CMakeFiles/yoo0.dir/src/Gun.cpp.o: /home/mirak/Documents/yoo0/src/Gun.cpp \
 CMakeFiles/yoo0.dir/src/Menu.cpp.o: /home/mirak/Documents/yoo0/src/Menu.cpp \
   /home/mirak/Documents/yoo0/include/Button.h \
   /home/mirak/Documents/yoo0/include/Menu.h \
+  /home/mirak/Documents/yoo0/include/Screen.h \
   /home/mirak/Documents/yoo0/raylib/include/raylib.h \
   /usr/include/stdc-predef.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h
@@ -674,12 +683,14 @@ CMakeFiles/yoo0.dir/src/Red.cpp.o: /home/mirak/Documents/yoo0/src/Red.cpp \
 CMakeFiles/yoo0.dir/src/main.cpp.o: /home/mirak/Documents/yoo0/src/main.cpp \
   /home/mirak/Documents/yoo0/include/Bullet.h \
   /home/mirak/Documents/yoo0/include/Button.h \
+  /home/mirak/Documents/yoo0/include/Death.h \
   /home/mirak/Documents/yoo0/include/Game.h \
   /home/mirak/Documents/yoo0/include/Green.h \
   /home/mirak/Documents/yoo0/include/Gun.h \
   /home/mirak/Documents/yoo0/include/Menu.h \
   /home/mirak/Documents/yoo0/include/Player.h \
   /home/mirak/Documents/yoo0/include/Red.h \
+  /home/mirak/Documents/yoo0/include/Screen.h \
   /home/mirak/Documents/yoo0/raylib/include/raylib.h \
   /usr/include/c++/14/backward/binders.h \
   /usr/include/c++/14/bit \
@@ -765,6 +776,7 @@ yoo0: /home/mirak/Documents/yoo0/raylib/lib/libraylib.a \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
   CMakeFiles/yoo0.dir/src/Bullet.cpp.o \
   CMakeFiles/yoo0.dir/src/Button.cpp.o \
+  CMakeFiles/yoo0.dir/src/Death.cpp.o \
   CMakeFiles/yoo0.dir/src/Game.cpp.o \
   CMakeFiles/yoo0.dir/src/Gun.cpp.o \
   CMakeFiles/yoo0.dir/src/Menu.cpp.o \
@@ -774,6 +786,8 @@ yoo0: /home/mirak/Documents/yoo0/raylib/lib/libraylib.a \
 
 
 CMakeFiles/yoo0.dir/src/Menu.cpp.o:
+
+CMakeFiles/yoo0.dir/src/Death.cpp.o:
 
 CMakeFiles/yoo0.dir/src/Button.cpp.o:
 
@@ -793,7 +807,7 @@ CMakeFiles/yoo0.dir/src/Bullet.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libc.so:
 
-/usr/include/c++/14/tr1/riemann_zeta.tcc:
+/usr/lib/x86_64-linux-gnu/crti.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
@@ -802,8 +816,6 @@ CMakeFiles/yoo0.dir/src/Bullet.cpp.o:
 /usr/include/c++/14/bits/stl_iterator.h:
 
 /usr/include/c++/14/bits/stl_algobase.h:
-
-/usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/14/bits/predefined_ops.h:
 
@@ -869,8 +881,6 @@ CMakeFiles/yoo0.dir/src/Red.cpp.o:
 
 /home/mirak/Documents/yoo0/src/Red.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/c++/14/cmath:
@@ -884,8 +894,6 @@ CMakeFiles/yoo0.dir/src/Red.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/usr/lib/x86_64-linux-gnu/crti.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
@@ -913,10 +921,6 @@ CMakeFiles/yoo0.dir/src/Red.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/usr/include/c++/14/bits/basic_string.h:
-
-/usr/include/c++/14/bits/locale_facets.h:
-
 /usr/include/c++/14/bits/streambuf.tcc:
 
 /usr/lib/x86_64-linux-gnu/libm.so:
@@ -934,6 +938,20 @@ CMakeFiles/yoo0.dir/src/Red.cpp.o:
 /usr/include/c++/14/ext/type_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/c++/14/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/14/bits/locale_facets.h:
+
+/usr/include/c++/14/bits/basic_string.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/home/mirak/Documents/yoo0/include/Screen.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -1007,6 +1025,10 @@ CMakeFiles/yoo0.dir/src/Player.cpp.o:
 
 /usr/include/pthread.h:
 
+/usr/include/asm-generic/errno-base.h:
+
+/home/mirak/Documents/yoo0/src/Death.cpp:
+
 /home/mirak/Documents/yoo0/include/Gun.h:
 
 /usr/include/c++/14/math.h:
@@ -1049,10 +1071,6 @@ CMakeFiles/yoo0.dir/src/Gun.cpp.o:
 
 /usr/include/c++/14/tr1/modified_bessel_func.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/14/ostream:
-
 /usr/include/features.h:
 
 /home/mirak/Documents/yoo0/src/main.cpp:
@@ -1063,8 +1081,6 @@ CMakeFiles/yoo0.dir/src/Gun.cpp.o:
 
 /usr/include/c++/14/string_view:
 
-/usr/include/c++/14/bits/char_traits.h:
-
 /home/mirak/Documents/yoo0/raylib/include/raymath.h:
 
 /home/mirak/Documents/yoo0/src/Button.cpp:
@@ -1072,6 +1088,10 @@ CMakeFiles/yoo0.dir/src/Gun.cpp.o:
 /usr/include/c++/14/bits/ios_base.h:
 
 /usr/include/c++/14/tr1/exp_integral.tcc:
+
+/usr/lib/x86_64-linux-gnu/Scrt1.o:
+
+/usr/include/c++/14/typeinfo:
 
 /usr/include/endian.h:
 
@@ -1098,6 +1118,20 @@ CMakeFiles/yoo0.dir/src/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/c++/14/ostream:
+
+/usr/include/c++/14/bits/char_traits.h:
+
+CMakeFiles/yoo0.dir/src/Game.cpp.o:
+
+/usr/lib/x86_64-linux-gnu/crtn.o:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/c++/14/bits/hash_bytes.h:
 
 /usr/include/c++/14/bits/basic_ios.tcc:
 
@@ -1146,6 +1180,8 @@ CMakeFiles/yoo0.dir/src/main.cpp.o:
 /usr/include/c++/14/bits/stl_pair.h:
 
 /usr/include/c++/14/bits/ostream_insert.h:
+
+/home/mirak/Documents/yoo0/include/Death.h:
 
 /usr/include/c++/14/bits/refwrap.h:
 
@@ -1221,19 +1257,15 @@ CMakeFiles/yoo0.dir/src/main.cpp.o:
 
 /home/mirak/Documents/yoo0/src/Gun.cpp:
 
+/lib/x86_64-linux-gnu/libm.so.6:
+
+/usr/include/c++/14/iosfwd:
+
 /usr/include/c++/14/new:
 
 /usr/include/linux/stddef.h:
 
 /usr/include/c++/14/string:
-
-CMakeFiles/yoo0.dir/src/Game.cpp.o:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/c++/14/bits/hash_bytes.h:
-
-/usr/lib/x86_64-linux-gnu/crtn.o:
 
 /usr/include/c++/14/vector:
 
@@ -1289,10 +1321,6 @@ CMakeFiles/yoo0.dir/src/Game.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
-/usr/include/asm-generic/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
 /usr/lib/linux/uapi/x86/asm/types.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h:
@@ -1312,11 +1340,3 @@ CMakeFiles/yoo0.dir/src/Game.cpp.o:
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/lib/linux/uapi/x86/asm/bitsperlong.h:
-
-/usr/include/c++/14/iosfwd:
-
-/lib/x86_64-linux-gnu/libm.so.6:
-
-/usr/include/c++/14/typeinfo:
-
-/usr/lib/x86_64-linux-gnu/Scrt1.o:

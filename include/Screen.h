@@ -2,5 +2,7 @@
 
 enum Screen{
     MENU,
-    GAME
+    GAME,
+    DEATH,
+    EXIT
 };

@@ -1,12 +1,13 @@
 #pragma once
 
+#include <vector>
+
 #include "Player.h"
 #include "Gun.h"
 #include "Bullet.h"
 #include "Red.h"
 #include "Green.h"
-
-#include <vector>
+#include "Screen.h"
 
 struct Game{
 	Player player;
@@ -18,11 +19,15 @@ struct Game{
 	float timer = 0.0f;
 
 	void init();
-	void update();
+	void update(Screen& currentScreen);
 	void draw();
 
 private:
-	void spawnEnemy();
-	void checkCollisions();
-	void cleanup();
+	void updateBullets();
+	void updateEnemies();
+	void handleEnemySpawning();
+	bool isPlayerHit();
+	void handleEnemyHits();
+	void removeDeadObjects();
+	void reset();
 };

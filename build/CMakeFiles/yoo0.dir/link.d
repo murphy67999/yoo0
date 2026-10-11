@@ -10,6 +10,7 @@ yoo0: \
   CMakeFiles/yoo0.dir/src/Game.cpp.o \
   CMakeFiles/yoo0.dir/src/Menu.cpp.o \
   CMakeFiles/yoo0.dir/src/Button.cpp.o \
+  CMakeFiles/yoo0.dir/src/Death.cpp.o \
   /home/mirak/Documents/yoo0/raylib/lib/libraylib.a \
   /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libm.so \
@@ -60,6 +61,8 @@ CMakeFiles/yoo0.dir/src/Game.cpp.o:
 CMakeFiles/yoo0.dir/src/Menu.cpp.o:
 
 CMakeFiles/yoo0.dir/src/Button.cpp.o:
+
+CMakeFiles/yoo0.dir/src/Death.cpp.o:
 
 /home/mirak/Documents/yoo0/raylib/lib/libraylib.a:
 

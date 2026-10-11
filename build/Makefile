@@ -177,6 +177,30 @@ src/Button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Button.cpp.s
 .PHONY : src/Button.cpp.s
 
+src/Death.o: src/Death.cpp.o
+.PHONY : src/Death.o
+
+# target to build an object file
+src/Death.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Death.cpp.o
+.PHONY : src/Death.cpp.o
+
+src/Death.i: src/Death.cpp.i
+.PHONY : src/Death.i
+
+# target to preprocess a source file
+src/Death.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Death.cpp.i
+.PHONY : src/Death.cpp.i
+
+src/Death.s: src/Death.cpp.s
+.PHONY : src/Death.s
+
+# target to generate assembly for a file
+src/Death.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Death.cpp.s
+.PHONY : src/Death.cpp.s
+
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
 
@@ -336,6 +360,9 @@ help:
 	@echo "... src/Button.o"
 	@echo "... src/Button.i"
 	@echo "... src/Button.s"
+	@echo "... src/Death.o"
+	@echo "... src/Death.i"
+	@echo "... src/Death.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"

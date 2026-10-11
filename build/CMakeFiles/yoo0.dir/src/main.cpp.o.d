@@ -1,10 +1,6 @@
 CMakeFiles/yoo0.dir/src/main.cpp.o: \
  /home/mirak/Documents/yoo0/src/main.cpp /usr/include/stdc-predef.h \
- /home/mirak/Documents/yoo0/include/Game.h \
- /home/mirak/Documents/yoo0/include/Player.h \
- /home/mirak/Documents/yoo0/raylib/include/raylib.h \
- /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
- /home/mirak/Documents/yoo0/include/Gun.h /usr/include/c++/14/vector \
+ /home/mirak/Documents/yoo0/include/Game.h /usr/include/c++/14/vector \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
@@ -55,9 +51,14 @@ CMakeFiles/yoo0.dir/src/main.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
  /usr/include/c++/14/bits/uses_allocator.h \
  /usr/include/c++/14/bits/uses_allocator_args.h /usr/include/c++/14/tuple \
+ /home/mirak/Documents/yoo0/include/Player.h \
+ /home/mirak/Documents/yoo0/raylib/include/raylib.h \
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
+ /home/mirak/Documents/yoo0/include/Gun.h \
  /home/mirak/Documents/yoo0/include/Bullet.h \
  /home/mirak/Documents/yoo0/include/Red.h \
  /home/mirak/Documents/yoo0/include/Green.h \
+ /home/mirak/Documents/yoo0/include/Screen.h \
  /home/mirak/Documents/yoo0/include/Menu.h \
  /home/mirak/Documents/yoo0/include/Button.h \
- /home/mirak/Documents/yoo0/include/Screen.h
+ /home/mirak/Documents/yoo0/include/Death.h

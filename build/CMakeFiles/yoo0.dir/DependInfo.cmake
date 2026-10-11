@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mirak/Documents/yoo0/src/Bullet.cpp" "CMakeFiles/yoo0.dir/src/Bullet.cpp.o" "gcc" "CMakeFiles/yoo0.dir/src/Bullet.cpp.o.d"
   "/home/mirak/Documents/yoo0/src/Button.cpp" "CMakeFiles/yoo0.dir/src/Button.cpp.o" "gcc" "CMakeFiles/yoo0.dir/src/Button.cpp.o.d"
+  "/home/mirak/Documents/yoo0/src/Death.cpp" "CMakeFiles/yoo0.dir/src/Death.cpp.o" "gcc" "CMakeFiles/yoo0.dir/src/Death.cpp.o.d"
   "/home/mirak/Documents/yoo0/src/Game.cpp" "CMakeFiles/yoo0.dir/src/Game.cpp.o" "gcc" "CMakeFiles/yoo0.dir/src/Game.cpp.o.d"
   "/home/mirak/Documents/yoo0/src/Gun.cpp" "CMakeFiles/yoo0.dir/src/Gun.cpp.o" "gcc" "CMakeFiles/yoo0.dir/src/Gun.cpp.o.d"
   "/home/mirak/Documents/yoo0/src/Menu.cpp" "CMakeFiles/yoo0.dir/src/Menu.cpp.o" "gcc" "CMakeFiles/yoo0.dir/src/Menu.cpp.o.d"

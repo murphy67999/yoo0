@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "Menu.h"
+#include "Death.h"
 #include "Screen.h"
 
 int main(){
@@ -9,12 +10,15 @@ int main(){
 	game.init();
 	Menu menu;
 	menu.init();
+	Death death;
+	death.init();
 
 	Screen currentScreen = MENU;
-		
+	bool running = true;
+
 	SetTargetFPS(60);
 
-	while (!WindowShouldClose())
+	while (running && !WindowShouldClose())
 	{
 		BeginDrawing();
 		switch (currentScreen){
@@ -23,9 +27,15 @@ int main(){
 			menu.draw();
 			break;
 		case GAME:
-			game.update();
+			game.update(currentScreen);
 			game.draw();
 			break;
+		case DEATH:
+			death.update(currentScreen);
+			death.draw();
+			break;
+		case EXIT:
+			running = false;
 		}
 		EndDrawing();
 	}

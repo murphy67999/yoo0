@@ -10,10 +10,11 @@ struct Button{
     int fontSize;
     Color textColor;
 
-    int getTextPosX();
-    int getTextPosY();
     bool isButtonClicked();
+    void draw();
 
 private:
     Rectangle getRec();
+    int getTextPosX();
+    int getTextPosY();
 };

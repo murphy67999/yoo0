@@ -115,6 +115,14 @@ CMakeFiles/yoo0.dir/src/Button.cpp.o
  /usr/include/stdc-predef.h
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h
 
+CMakeFiles/yoo0.dir/src/Death.cpp.o
+ /home/mirak/Documents/yoo0/src/Death.cpp
+ /home/mirak/Documents/yoo0/include/Button.h
+ /home/mirak/Documents/yoo0/include/Death.h
+ /home/mirak/Documents/yoo0/raylib/include/raylib.h
+ /usr/include/stdc-predef.h
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h
+
 CMakeFiles/yoo0.dir/src/Game.cpp.o
  /home/mirak/Documents/yoo0/src/Game.cpp
  /home/mirak/Documents/yoo0/include/Bullet.h
@@ -123,6 +131,7 @@ CMakeFiles/yoo0.dir/src/Game.cpp.o
  /home/mirak/Documents/yoo0/include/Gun.h
  /home/mirak/Documents/yoo0/include/Player.h
  /home/mirak/Documents/yoo0/include/Red.h
+ /home/mirak/Documents/yoo0/include/Screen.h
  /home/mirak/Documents/yoo0/raylib/include/raylib.h
  /home/mirak/Documents/yoo0/raylib/include/raymath.h
  /usr/include/alloca.h
@@ -496,6 +505,7 @@ CMakeFiles/yoo0.dir/src/Menu.cpp.o
  /home/mirak/Documents/yoo0/src/Menu.cpp
  /home/mirak/Documents/yoo0/include/Button.h
  /home/mirak/Documents/yoo0/include/Menu.h
+ /home/mirak/Documents/yoo0/include/Screen.h
  /home/mirak/Documents/yoo0/raylib/include/raylib.h
  /usr/include/stdc-predef.h
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h
@@ -682,12 +692,14 @@ CMakeFiles/yoo0.dir/src/main.cpp.o
  /home/mirak/Documents/yoo0/src/main.cpp
  /home/mirak/Documents/yoo0/include/Bullet.h
  /home/mirak/Documents/yoo0/include/Button.h
+ /home/mirak/Documents/yoo0/include/Death.h
  /home/mirak/Documents/yoo0/include/Game.h
  /home/mirak/Documents/yoo0/include/Green.h
  /home/mirak/Documents/yoo0/include/Gun.h
  /home/mirak/Documents/yoo0/include/Menu.h
  /home/mirak/Documents/yoo0/include/Player.h
  /home/mirak/Documents/yoo0/include/Red.h
+ /home/mirak/Documents/yoo0/include/Screen.h
  /home/mirak/Documents/yoo0/raylib/include/raylib.h
  /usr/include/c++/14/backward/binders.h
  /usr/include/c++/14/bit
@@ -774,6 +786,7 @@ yoo0
  /usr/lib/x86_64-linux-gnu/libc_nonshared.a
  /home/mirak/Documents/yoo0/build/CMakeFiles/yoo0.dir/src/Bullet.cpp.o
  /home/mirak/Documents/yoo0/build/CMakeFiles/yoo0.dir/src/Button.cpp.o
+ /home/mirak/Documents/yoo0/build/CMakeFiles/yoo0.dir/src/Death.cpp.o
  /home/mirak/Documents/yoo0/build/CMakeFiles/yoo0.dir/src/Game.cpp.o
  /home/mirak/Documents/yoo0/build/CMakeFiles/yoo0.dir/src/Gun.cpp.o
  /home/mirak/Documents/yoo0/build/CMakeFiles/yoo0.dir/src/Menu.cpp.o
