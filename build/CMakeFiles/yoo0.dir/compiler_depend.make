@@ -116,6 +116,7 @@ CMakeFiles/yoo0.dir/src/Button.cpp.o: /home/mirak/Documents/yoo0/src/Button.cpp 
 CMakeFiles/yoo0.dir/src/Death.cpp.o: /home/mirak/Documents/yoo0/src/Death.cpp \
   /home/mirak/Documents/yoo0/include/Button.h \
   /home/mirak/Documents/yoo0/include/Death.h \
+  /home/mirak/Documents/yoo0/include/Screen.h \
   /home/mirak/Documents/yoo0/raylib/include/raylib.h \
   /usr/include/stdc-predef.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h
