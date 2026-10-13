@@ -1,5 +1,5 @@
-CMakeFiles/yoo0.dir/src/Game.cpp.o: \
- /home/mirak/Documents/yoo0/src/Game.cpp /usr/include/stdc-predef.h \
+CMakeFiles/yoo0.dir/src/Game2D.cpp.o: \
+ /home/mirak/Documents/yoo0/src/Game2D.cpp /usr/include/stdc-predef.h \
  /home/mirak/Documents/yoo0/raylib/include/raylib.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
  /home/mirak/Documents/yoo0/raylib/include/raymath.h \
@@ -185,14 +185,14 @@ CMakeFiles/yoo0.dir/src/Game.cpp.o: \
  /usr/include/c++/14/bits/basic_ios.tcc \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
  /usr/include/c++/14/bits/istream.tcc \
- /home/mirak/Documents/yoo0/include/Game.h /usr/include/c++/14/vector \
+ /home/mirak/Documents/yoo0/include/Game2D.h /usr/include/c++/14/vector \
  /usr/include/c++/14/bits/stl_uninitialized.h \
  /usr/include/c++/14/bits/stl_vector.h \
  /usr/include/c++/14/bits/stl_bvector.h \
  /usr/include/c++/14/bits/vector.tcc \
- /home/mirak/Documents/yoo0/include/Player.h \
+ /home/mirak/Documents/yoo0/include/Player2D.h \
  /home/mirak/Documents/yoo0/include/Gun.h \
  /home/mirak/Documents/yoo0/include/Bullet.h \
  /home/mirak/Documents/yoo0/include/Red.h \
  /home/mirak/Documents/yoo0/include/Green.h \
- /home/mirak/Documents/yoo0/include/Screen.h
+ /home/mirak/Documents/yoo0/include/Scene.h

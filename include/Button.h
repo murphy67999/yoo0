@@ -10,6 +10,7 @@ struct Button{
     int fontSize;
     Color textColor;
 
+    Button(Vector2 pos, Vector2 size, Color color, const char* text, int fontSize, Color fontColor);
     bool isButtonClicked();
     void draw();
 

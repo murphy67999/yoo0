@@ -6,14 +6,16 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(yoo0
 	src/main.cpp
-	src/Player.cpp
+	src/Player2D.cpp
 	src/Gun.cpp
 	src/Bullet.cpp
 	src/Red.cpp
-	src/Game.cpp
+	src/Game2D.cpp
 	src/Menu.cpp
 	src/Button.cpp
 	src/Death.cpp
+	src/Game3D.cpp
+	src/Player3D.cpp
 )
 
 target_include_directories(yoo0 PRIVATE

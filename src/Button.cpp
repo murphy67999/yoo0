@@ -2,6 +2,10 @@
 
 #include "Button.h"
 
+Button::Button(Vector2 pos, Vector2 size, Color color, const char* text, int fontSize, Color textColor):
+pos(pos), size(size), color(color), text(text), fontSize(fontSize), textColor(textColor) {}
+
+
 bool Button::isButtonClicked(){
     bool hover = CheckCollisionPointRec(GetMousePosition(), getRec());
 

@@ -1,37 +1,38 @@
 #include "raylib.h"
 
 #include "Menu.h"
-#include "Screen.h"
+#include "Scene.h"
 
-void Menu::init(){
-    play.size = {200, 100};
-    play.pos = {
-        GetScreenWidth() / 2.0f - play.size.x / 2.0f,
-        GetScreenHeight() / 2.0f - play.size.y / 2.0f
-    };
-    play.color = {0, 200, 83, 255};
-    play.text = "PLAY";
-    play.fontSize = 70;
-    play.textColor = BLACK;
+Menu::Menu():
+twoDimension(
+    {GetScreenWidth() / 2.0f - 100.0f, GetScreenHeight() / 2.0f - 50.0f},
+    {200, 100},
+    {0, 200, 83, 255},
+    "2D", 70, BLACK
+),
+threeDimenion(
+    {GetScreenWidth() / 2.0f - 100.0f, (GetScreenHeight() / 2.0f - 50.0f) + 150.0f},
+    {200, 100},
+    {0, 200, 83, 255},
+    "3D", 70, BLACK
+),
+exit(
+    {GetScreenWidth() / 2.0f - 100.0f, (GetScreenHeight() / 2.0f - 50.0f) + 300.0f},
+    {200, 100},
+    {0, 200, 83, 255},
+    "EXIT", 70, BLACK
+)
+{}
 
-
-    exit.size = {200, 100};
-    exit.pos = {
-        GetScreenWidth() / 2.0f - play.size.x / 2.0f,
-        (GetScreenHeight() / 2.0f - play.size.y / 2.0f) + 150.0f
-    };
-    exit.color = {0, 200, 83, 255};
-    exit.text = "EXIT";
-    exit.fontSize = 70;
-    exit.textColor = BLACK;
-}
-
-void Menu::update(Screen& currentScreen){
-    if (play.isButtonClicked()){
-        currentScreen = GAME;
+void Menu::update(Scene& currentScene){
+    if (twoDimension.isButtonClicked()){
+        currentScene = GAME_2D;
+    }
+    if (threeDimenion.isButtonClicked()){
+        currentScene = GAME_3D;
     }
     if (exit.isButtonClicked()){
-        currentScreen = EXIT;
+        currentScene = EXIT;
     }
 }
 
@@ -43,6 +44,7 @@ void Menu::draw(){
     int posX = GetScreenWidth() / 2 - width / 2;
     DrawText(title, posX, 200, 100, WHITE);
 
-    play.draw();
+    twoDimension.draw();
+    threeDimenion.draw();
     exit.draw();
 }

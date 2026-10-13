@@ -201,29 +201,53 @@ src/Death.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Death.cpp.s
 .PHONY : src/Death.cpp.s
 
-src/Game.o: src/Game.cpp.o
-.PHONY : src/Game.o
+src/Game2D.o: src/Game2D.cpp.o
+.PHONY : src/Game2D.o
 
 # target to build an object file
-src/Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game.cpp.o
-.PHONY : src/Game.cpp.o
+src/Game2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game2D.cpp.o
+.PHONY : src/Game2D.cpp.o
 
-src/Game.i: src/Game.cpp.i
-.PHONY : src/Game.i
+src/Game2D.i: src/Game2D.cpp.i
+.PHONY : src/Game2D.i
 
 # target to preprocess a source file
-src/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game.cpp.i
-.PHONY : src/Game.cpp.i
+src/Game2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game2D.cpp.i
+.PHONY : src/Game2D.cpp.i
 
-src/Game.s: src/Game.cpp.s
-.PHONY : src/Game.s
+src/Game2D.s: src/Game2D.cpp.s
+.PHONY : src/Game2D.s
 
 # target to generate assembly for a file
-src/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game.cpp.s
-.PHONY : src/Game.cpp.s
+src/Game2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game2D.cpp.s
+.PHONY : src/Game2D.cpp.s
+
+src/Game3D.o: src/Game3D.cpp.o
+.PHONY : src/Game3D.o
+
+# target to build an object file
+src/Game3D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game3D.cpp.o
+.PHONY : src/Game3D.cpp.o
+
+src/Game3D.i: src/Game3D.cpp.i
+.PHONY : src/Game3D.i
+
+# target to preprocess a source file
+src/Game3D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game3D.cpp.i
+.PHONY : src/Game3D.cpp.i
+
+src/Game3D.s: src/Game3D.cpp.s
+.PHONY : src/Game3D.s
+
+# target to generate assembly for a file
+src/Game3D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game3D.cpp.s
+.PHONY : src/Game3D.cpp.s
 
 src/Gun.o: src/Gun.cpp.o
 .PHONY : src/Gun.o
@@ -273,29 +297,53 @@ src/Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Menu.cpp.s
 .PHONY : src/Menu.cpp.s
 
-src/Player.o: src/Player.cpp.o
-.PHONY : src/Player.o
+src/Player2D.o: src/Player2D.cpp.o
+.PHONY : src/Player2D.o
 
 # target to build an object file
-src/Player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Player.cpp.o
-.PHONY : src/Player.cpp.o
+src/Player2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Player2D.cpp.o
+.PHONY : src/Player2D.cpp.o
 
-src/Player.i: src/Player.cpp.i
-.PHONY : src/Player.i
+src/Player2D.i: src/Player2D.cpp.i
+.PHONY : src/Player2D.i
 
 # target to preprocess a source file
-src/Player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Player.cpp.i
-.PHONY : src/Player.cpp.i
+src/Player2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Player2D.cpp.i
+.PHONY : src/Player2D.cpp.i
 
-src/Player.s: src/Player.cpp.s
-.PHONY : src/Player.s
+src/Player2D.s: src/Player2D.cpp.s
+.PHONY : src/Player2D.s
 
 # target to generate assembly for a file
-src/Player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Player.cpp.s
-.PHONY : src/Player.cpp.s
+src/Player2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Player2D.cpp.s
+.PHONY : src/Player2D.cpp.s
+
+src/Player3D.o: src/Player3D.cpp.o
+.PHONY : src/Player3D.o
+
+# target to build an object file
+src/Player3D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Player3D.cpp.o
+.PHONY : src/Player3D.cpp.o
+
+src/Player3D.i: src/Player3D.cpp.i
+.PHONY : src/Player3D.i
+
+# target to preprocess a source file
+src/Player3D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Player3D.cpp.i
+.PHONY : src/Player3D.cpp.i
+
+src/Player3D.s: src/Player3D.cpp.s
+.PHONY : src/Player3D.s
+
+# target to generate assembly for a file
+src/Player3D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Player3D.cpp.s
+.PHONY : src/Player3D.cpp.s
 
 src/Red.o: src/Red.cpp.o
 .PHONY : src/Red.o
@@ -363,18 +411,24 @@ help:
 	@echo "... src/Death.o"
 	@echo "... src/Death.i"
 	@echo "... src/Death.s"
-	@echo "... src/Game.o"
-	@echo "... src/Game.i"
-	@echo "... src/Game.s"
+	@echo "... src/Game2D.o"
+	@echo "... src/Game2D.i"
+	@echo "... src/Game2D.s"
+	@echo "... src/Game3D.o"
+	@echo "... src/Game3D.i"
+	@echo "... src/Game3D.s"
 	@echo "... src/Gun.o"
 	@echo "... src/Gun.i"
 	@echo "... src/Gun.s"
 	@echo "... src/Menu.o"
 	@echo "... src/Menu.i"
 	@echo "... src/Menu.s"
-	@echo "... src/Player.o"
-	@echo "... src/Player.i"
-	@echo "... src/Player.s"
+	@echo "... src/Player2D.o"
+	@echo "... src/Player2D.i"
+	@echo "... src/Player2D.s"
+	@echo "... src/Player3D.o"
+	@echo "... src/Player3D.i"
+	@echo "... src/Player3D.s"
 	@echo "... src/Red.o"
 	@echo "... src/Red.i"
 	@echo "... src/Red.s"

@@ -1,13 +1,14 @@
 #pragma once
 
 #include "Button.h"
-#include "Screen.h"
+#include "Scene.h"
 
 struct Menu{
-	Button play;
+	Button twoDimension;
+    Button threeDimenion;
     Button exit;
 
-    void init();
-    void update(Screen& currentScreen);
+    Menu();
+    void update(Scene& currentScene);
     void draw();
 };

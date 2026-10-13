@@ -3,7 +3,7 @@
 #include "raylib.h"
 #include "Gun.h"
 
-struct Player{
+struct Player2D{
 	Vector2 spawnPos = {1000.0f, 900.0f};
 	Vector2 pos = spawnPos;
 	float radius = 50.0f;

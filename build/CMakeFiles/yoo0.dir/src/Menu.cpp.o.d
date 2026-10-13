@@ -4,4 +4,4 @@ CMakeFiles/yoo0.dir/src/Menu.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
  /home/mirak/Documents/yoo0/include/Menu.h \
  /home/mirak/Documents/yoo0/include/Button.h \
- /home/mirak/Documents/yoo0/include/Screen.h
+ /home/mirak/Documents/yoo0/include/Scene.h

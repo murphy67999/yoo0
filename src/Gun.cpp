@@ -4,8 +4,8 @@
 #include "Gun.h"
 #include "Bullet.h"
 
-void Gun::update(Vector2 pos1, Vector2 pos2){
-	Vector2 dir = Vector2Subtract(pos2, pos1);
+void Gun::update(Vector2 pos1, Vector2 targetPos){
+	Vector2 dir = Vector2Subtract(targetPos, pos1);
 
 	if (Vector2Length(dir) > 0.0f){
 		dir = Vector2Normalize(dir);
@@ -16,7 +16,7 @@ void Gun::update(Vector2 pos1, Vector2 pos2){
 	reload();
 }
 
-void Gun::shoot(Vector2 target, std::vector<Bullet>& bullets){
+void Gun::shoot(Vector2 targetPos, std::vector<Bullet>& bullets){
 	if (!canShoot) return;
 
 	canShoot = false;
@@ -24,7 +24,7 @@ void Gun::shoot(Vector2 target, std::vector<Bullet>& bullets){
 	Bullet bullet;
 	bullet.pos = pos;
 
-	Vector2 dir = Vector2Subtract(target, bullet.pos);
+	Vector2 dir = Vector2Subtract(targetPos, bullet.pos);
 	dir = Vector2Normalize(dir);
 
 	bullet.dir = dir;

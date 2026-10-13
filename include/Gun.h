@@ -14,8 +14,9 @@ struct Gun{
 
 	Vector2 pos;
 
-	void update(Vector2 pos, Vector2 dir);
+	void update(Vector2 pos1, Vector2 targetPos);
 	void shoot(Vector2 target, std::vector<Bullet>& bullets);
+
 private:
 	void reload();
 };

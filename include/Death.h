@@ -1,13 +1,13 @@
 #pragma once
 
 #include "Button.h"
-#include "Screen.h"
+#include "Scene.h"
 
 struct Death{
     Button restart;
     Button menu;
     
-    void init();
-    void update(Screen& currentScreen);
+    Death();
+    void update(Scene& currentScene);
     void draw();
 };

@@ -3,14 +3,16 @@ yoo0: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o \
   CMakeFiles/yoo0.dir/src/main.cpp.o \
-  CMakeFiles/yoo0.dir/src/Player.cpp.o \
+  CMakeFiles/yoo0.dir/src/Player2D.cpp.o \
   CMakeFiles/yoo0.dir/src/Gun.cpp.o \
   CMakeFiles/yoo0.dir/src/Bullet.cpp.o \
   CMakeFiles/yoo0.dir/src/Red.cpp.o \
-  CMakeFiles/yoo0.dir/src/Game.cpp.o \
+  CMakeFiles/yoo0.dir/src/Game2D.cpp.o \
   CMakeFiles/yoo0.dir/src/Menu.cpp.o \
   CMakeFiles/yoo0.dir/src/Button.cpp.o \
   CMakeFiles/yoo0.dir/src/Death.cpp.o \
+  CMakeFiles/yoo0.dir/src/Game3D.cpp.o \
+  CMakeFiles/yoo0.dir/src/Player3D.cpp.o \
   /home/mirak/Documents/yoo0/raylib/lib/libraylib.a \
   /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libm.so \
@@ -48,7 +50,7 @@ yoo0: \
 
 CMakeFiles/yoo0.dir/src/main.cpp.o:
 
-CMakeFiles/yoo0.dir/src/Player.cpp.o:
+CMakeFiles/yoo0.dir/src/Player2D.cpp.o:
 
 CMakeFiles/yoo0.dir/src/Gun.cpp.o:
 
@@ -56,13 +58,17 @@ CMakeFiles/yoo0.dir/src/Bullet.cpp.o:
 
 CMakeFiles/yoo0.dir/src/Red.cpp.o:
 
-CMakeFiles/yoo0.dir/src/Game.cpp.o:
+CMakeFiles/yoo0.dir/src/Game2D.cpp.o:
 
 CMakeFiles/yoo0.dir/src/Menu.cpp.o:
 
 CMakeFiles/yoo0.dir/src/Button.cpp.o:
 
 CMakeFiles/yoo0.dir/src/Death.cpp.o:
+
+CMakeFiles/yoo0.dir/src/Game3D.cpp.o:
+
+CMakeFiles/yoo0.dir/src/Player3D.cpp.o:
 
 /home/mirak/Documents/yoo0/raylib/lib/libraylib.a:
 

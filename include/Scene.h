@@ -1,8 +1,9 @@
 #pragma once
 
-enum Screen{
+enum Scene{
     MENU,
-    GAME,
+    GAME_2D,
+    GAME_3D,
     DEATH,
     EXIT
 };

@@ -479,7 +479,7 @@ typedef struct VrDeviceInfo {
     int vResolution;                // Vertical resolution in pixels
     float hScreenSize;              // Horizontal size in meters
     float vScreenSize;              // Vertical size in meters
-    float vScreenCenter;            // Screen center in meters
+    float vScreenCenter;            // Scene center in meters
     float eyeToScreenDistance;      // Distance between eye and display in meters
     float lensSeparationDistance;   // Lens separation distance in meters
     float interpupillaryDistance;   // IPD (distance between pupils) in meters
@@ -1044,7 +1044,7 @@ RLAPI void SetShaderValueMatrix(Shader shader, int locIndex, Matrix mat);       
 RLAPI void SetShaderValueTexture(Shader shader, int locIndex, Texture2D texture); // Set shader uniform value for texture (sampler2d)
 RLAPI void UnloadShader(Shader shader);                                    // Unload shader from GPU memory (VRAM)
 
-// Screen-space-related functions
+// Scene-space-related functions
 RLAPI Ray GetMouseRay(Vector2 mousePosition, Camera camera);      // Get a ray trace from mouse position
 RLAPI Matrix GetCameraMatrix(Camera camera);                      // Get camera transform matrix (view matrix)
 RLAPI Matrix GetCameraMatrix2D(Camera2D camera);                  // Get camera 2d transform matrix

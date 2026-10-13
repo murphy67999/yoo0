@@ -2,28 +2,33 @@
 #include "raymath.h"
 #include <iostream>
 
-#include "Game.h"
+#include "Game2D.h"
 #include "Gun.h"
-#include "Screen.h"
+#include "Scene.h"
 
-void Game::init(){
-	player.gun = Gun();
+Game2D::Game2D(){
+	player2D.gun = Gun();
 }
 
-void Game::update(Screen& currentScreen){
-	player.update();
-	player.gun.update(player.pos, GetMousePosition());
+void Game2D::update(Scene& currentScene){
+	player2D.update();
+	player2D.gun.update(player2D.pos, GetMousePosition());
 
 	updateBullets();
 	updateEnemies();
 
 	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
-		player.gun.shoot(GetMousePosition(), bullets);
+		player2D.gun.shoot(GetMousePosition(), bullets);
 	}
 
 	if (isPlayerHit()){
 		reset();
-		currentScreen = DEATH;
+		currentScene = DEATH;
+	}
+
+	if (IsKeyPressed(KEY_Z)){
+		reset();
+		currentScene = MENU;
 	}
 
 	handleEnemySpawning();
@@ -31,11 +36,11 @@ void Game::update(Screen& currentScreen){
 	removeDeadObjects();
 }
 
-void Game::draw(){
-	ClearBackground(RAYWHITE);
+void Game2D::draw(){
+	ClearBackground(DARKGRAY);
 
-	DrawCircleV(player.pos, player.radius, player.color);
-	DrawCircleV(player.gun.pos, player.gun.radius, player.gun.color);
+	DrawCircleV(player2D.pos, player2D.radius, player2D.color);
+	DrawCircleV(player2D.gun.pos, player2D.gun.radius, player2D.gun.color);
 
 	for (Bullet bullet : bullets){
 		DrawCircleV(bullet.pos, bullet.radius, bullet.color);
@@ -49,25 +54,28 @@ void Game::draw(){
 		DrawCircleV(green.pos, green.radius, green.color);
 		DrawCircleV(green.gun.pos, green.gun.radius, green.gun.color);
 	}
+
+	int fps = GetFPS();
+    DrawText(TextFormat("FPS %d", fps), 10, 10, 50, RAYWHITE);
 }
 
-void Game::updateBullets(){
+void Game2D::updateBullets(){
 	for (Bullet& bullet : bullets){
 		bullet.update();
 	}
 }
 
-void Game::updateEnemies(){
+void Game2D::updateEnemies(){
 	for (Red& red : redEnemies){
-		red.update(player.pos);
+		red.update(player2D.pos);
 	}
 	for (Green& green : greenEnemies){
-		green.gun.update(green.pos, player.pos);
-		green.gun.shoot(player.pos, bullets);
+		green.gun.update(green.pos, player2D.pos);
+		green.gun.shoot(player2D.pos, bullets);
 	}
 }
 
-void Game::handleEnemySpawning(){
+void Game2D::handleEnemySpawning(){
 	timer += GetFrameTime();
 	if (timer >= 2.0f){
 		timer = 0.0f;
@@ -99,10 +107,10 @@ void Game::handleEnemySpawning(){
 	}
 }
 
-bool Game::isPlayerHit(){
+bool Game2D::isPlayerHit(){
 	for (Bullet& Bullet : bullets){
 		if (CheckCollisionCircles(
-			player.pos, player.radius,
+			player2D.pos, player2D.radius,
 			Bullet.pos, Bullet.radius
 		)){
 			return true;
@@ -111,7 +119,7 @@ bool Game::isPlayerHit(){
 
 	for (const Red& red : redEnemies){
 		if (CheckCollisionCircles(
-			player.pos, player.radius,
+			player2D.pos, player2D.radius,
 			red.pos, red.radius
 		)){
 			return true;
@@ -121,7 +129,7 @@ bool Game::isPlayerHit(){
 	return false;
 }
 
-void Game::handleEnemyHits(){
+void Game2D::handleEnemyHits(){
 	for (Bullet& bullet : bullets){
 		if (!bullet.isAlive) continue;
 
@@ -151,7 +159,7 @@ void Game::handleEnemyHits(){
 	}
 }
 
-void Game::removeDeadObjects(){
+void Game2D::removeDeadObjects(){
 	for (int i = bullets.size() - 1; i >= 0; i--){
 		if (!bullets[i].isAlive){
 			bullets.erase(bullets.begin() + i);
@@ -169,10 +177,10 @@ void Game::removeDeadObjects(){
 	}
 }
 
-void Game::reset(){
+void Game2D::reset(){
 	bullets.clear();
 	redEnemies.clear();
 	greenEnemies.clear();
 
-	player.pos = player.spawnPos;
+	player2D.pos = player2D.spawnPos;
 }

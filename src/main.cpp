@@ -1,37 +1,37 @@
-#include "Game.h"
+#include "Game2D.h"
+#include "Game3D.h"
 #include "Menu.h"
 #include "Death.h"
-#include "Screen.h"
+#include "Scene.h"
 
 int main(){
-	InitWindow(1700, 1000, "Yooo0");
+	InitWindow(1800, 1000, "Yooo0");
 
-	Game game;
-	game.init();
+	Game2D game2D;
+	Game3D game3D;
 	Menu menu;
-	menu.init();
 	Death death;
-	death.init();
 
-	Screen currentScreen = MENU;
+	Scene currentScene = MENU;
 	bool running = true;
 
-	SetTargetFPS(60);
-
-	while (running && !WindowShouldClose())
-	{
+	while (running && !WindowShouldClose()){
 		BeginDrawing();
-		switch (currentScreen){
+		switch (currentScene){
 		case MENU:
-			menu.update(currentScreen);
+			menu.update(currentScene);
 			menu.draw();
 			break;
-		case GAME:
-			game.update(currentScreen);
-			game.draw();
+		case GAME_2D:
+			game2D.update(currentScene);
+			game2D.draw();
+			break;
+		case GAME_3D:
+			game3D.update(currentScene);
+			game3D.draw();
 			break;
 		case DEATH:
-			death.update(currentScreen);
+			death.update(currentScene);
 			death.draw();
 			break;
 		case EXIT:
