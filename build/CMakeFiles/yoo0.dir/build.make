@@ -198,19 +198,19 @@ CMakeFiles/yoo0.dir/src/Death.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yoo0.dir/src/Death.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mirak/Documents/yoo0/src/Death.cpp -o CMakeFiles/yoo0.dir/src/Death.cpp.s
 
-CMakeFiles/yoo0.dir/src/Game3D.cpp.o: CMakeFiles/yoo0.dir/flags.make
-CMakeFiles/yoo0.dir/src/Game3D.cpp.o: /home/mirak/Documents/yoo0/src/Game3D.cpp
-CMakeFiles/yoo0.dir/src/Game3D.cpp.o: CMakeFiles/yoo0.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mirak/Documents/yoo0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/yoo0.dir/src/Game3D.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yoo0.dir/src/Game3D.cpp.o -MF CMakeFiles/yoo0.dir/src/Game3D.cpp.o.d -o CMakeFiles/yoo0.dir/src/Game3D.cpp.o -c /home/mirak/Documents/yoo0/src/Game3D.cpp
+CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o: CMakeFiles/yoo0.dir/flags.make
+CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o: /home/mirak/Documents/yoo0/src/Sandbox3D.cpp
+CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o: CMakeFiles/yoo0.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mirak/Documents/yoo0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o -MF CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o.d -o CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o -c /home/mirak/Documents/yoo0/src/Sandbox3D.cpp
 
-CMakeFiles/yoo0.dir/src/Game3D.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yoo0.dir/src/Game3D.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mirak/Documents/yoo0/src/Game3D.cpp > CMakeFiles/yoo0.dir/src/Game3D.cpp.i
+CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mirak/Documents/yoo0/src/Sandbox3D.cpp > CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.i
 
-CMakeFiles/yoo0.dir/src/Game3D.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yoo0.dir/src/Game3D.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mirak/Documents/yoo0/src/Game3D.cpp -o CMakeFiles/yoo0.dir/src/Game3D.cpp.s
+CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mirak/Documents/yoo0/src/Sandbox3D.cpp -o CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.s
 
 CMakeFiles/yoo0.dir/src/Player3D.cpp.o: CMakeFiles/yoo0.dir/flags.make
 CMakeFiles/yoo0.dir/src/Player3D.cpp.o: /home/mirak/Documents/yoo0/src/Player3D.cpp
@@ -226,6 +226,20 @@ CMakeFiles/yoo0.dir/src/Player3D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yoo0.dir/src/Player3D.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mirak/Documents/yoo0/src/Player3D.cpp -o CMakeFiles/yoo0.dir/src/Player3D.cpp.s
 
+CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o: CMakeFiles/yoo0.dir/flags.make
+CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o: /home/mirak/Documents/yoo0/src/Sandbox2D.cpp
+CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o: CMakeFiles/yoo0.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mirak/Documents/yoo0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o -MF CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o.d -o CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o -c /home/mirak/Documents/yoo0/src/Sandbox2D.cpp
+
+CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mirak/Documents/yoo0/src/Sandbox2D.cpp > CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.i
+
+CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mirak/Documents/yoo0/src/Sandbox2D.cpp -o CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.s
+
 # Object files for target yoo0
 yoo0_OBJECTS = \
 "CMakeFiles/yoo0.dir/src/main.cpp.o" \
@@ -237,8 +251,9 @@ yoo0_OBJECTS = \
 "CMakeFiles/yoo0.dir/src/Menu.cpp.o" \
 "CMakeFiles/yoo0.dir/src/Button.cpp.o" \
 "CMakeFiles/yoo0.dir/src/Death.cpp.o" \
-"CMakeFiles/yoo0.dir/src/Game3D.cpp.o" \
-"CMakeFiles/yoo0.dir/src/Player3D.cpp.o"
+"CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o" \
+"CMakeFiles/yoo0.dir/src/Player3D.cpp.o" \
+"CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o"
 
 # External object files for target yoo0
 yoo0_EXTERNAL_OBJECTS =
@@ -252,13 +267,14 @@ yoo0: CMakeFiles/yoo0.dir/src/Game2D.cpp.o
 yoo0: CMakeFiles/yoo0.dir/src/Menu.cpp.o
 yoo0: CMakeFiles/yoo0.dir/src/Button.cpp.o
 yoo0: CMakeFiles/yoo0.dir/src/Death.cpp.o
-yoo0: CMakeFiles/yoo0.dir/src/Game3D.cpp.o
+yoo0: CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o
 yoo0: CMakeFiles/yoo0.dir/src/Player3D.cpp.o
+yoo0: CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o
 yoo0: CMakeFiles/yoo0.dir/build.make
 yoo0: CMakeFiles/yoo0.dir/compiler_depend.ts
 yoo0: /home/mirak/Documents/yoo0/raylib/lib/libraylib.a
 yoo0: CMakeFiles/yoo0.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mirak/Documents/yoo0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable yoo0"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mirak/Documents/yoo0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable yoo0"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/yoo0.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

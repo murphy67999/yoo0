@@ -59,7 +59,8 @@ CMakeFiles/yoo0.dir/src/main.cpp.o: \
  /home/mirak/Documents/yoo0/include/Red.h \
  /home/mirak/Documents/yoo0/include/Green.h \
  /home/mirak/Documents/yoo0/include/Scene.h \
- /home/mirak/Documents/yoo0/include/Game3D.h \
+ /home/mirak/Documents/yoo0/include/Sandbox2D.h \
+ /home/mirak/Documents/yoo0/include/Sandbox3D.h \
  /home/mirak/Documents/yoo0/include/Player3D.h \
  /home/mirak/Documents/yoo0/include/Menu.h \
  /home/mirak/Documents/yoo0/include/Button.h \

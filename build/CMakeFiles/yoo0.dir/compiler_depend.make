@@ -363,76 +363,6 @@ CMakeFiles/yoo0.dir/src/Game2D.cpp.o: /home/mirak/Documents/yoo0/src/Game2D.cpp 
   /usr/lib/linux/uapi/x86/asm/posix_types_64.h \
   /usr/lib/linux/uapi/x86/asm/types.h
 
-CMakeFiles/yoo0.dir/src/Game3D.cpp.o: /home/mirak/Documents/yoo0/src/Game3D.cpp \
-  /home/mirak/Documents/yoo0/include/Game3D.h \
-  /home/mirak/Documents/yoo0/include/Player3D.h \
-  /home/mirak/Documents/yoo0/include/Scene.h \
-  /home/mirak/Documents/yoo0/raylib/include/raylib.h \
-  /usr/include/c++/14/backward/binders.h \
-  /usr/include/c++/14/bit \
-  /usr/include/c++/14/bits/alloc_traits.h \
-  /usr/include/c++/14/bits/allocator.h \
-  /usr/include/c++/14/bits/concept_check.h \
-  /usr/include/c++/14/bits/cpp_type_traits.h \
-  /usr/include/c++/14/bits/exception.h \
-  /usr/include/c++/14/bits/exception_defines.h \
-  /usr/include/c++/14/bits/functexcept.h \
-  /usr/include/c++/14/bits/functional_hash.h \
-  /usr/include/c++/14/bits/hash_bytes.h \
-  /usr/include/c++/14/bits/invoke.h \
-  /usr/include/c++/14/bits/memory_resource.h \
-  /usr/include/c++/14/bits/memoryfwd.h \
-  /usr/include/c++/14/bits/move.h \
-  /usr/include/c++/14/bits/new_allocator.h \
-  /usr/include/c++/14/bits/predefined_ops.h \
-  /usr/include/c++/14/bits/ptr_traits.h \
-  /usr/include/c++/14/bits/range_access.h \
-  /usr/include/c++/14/bits/refwrap.h \
-  /usr/include/c++/14/bits/requires_hosted.h \
-  /usr/include/c++/14/bits/stl_algobase.h \
-  /usr/include/c++/14/bits/stl_bvector.h \
-  /usr/include/c++/14/bits/stl_construct.h \
-  /usr/include/c++/14/bits/stl_function.h \
-  /usr/include/c++/14/bits/stl_iterator.h \
-  /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/14/bits/stl_iterator_base_types.h \
-  /usr/include/c++/14/bits/stl_pair.h \
-  /usr/include/c++/14/bits/stl_uninitialized.h \
-  /usr/include/c++/14/bits/stl_vector.h \
-  /usr/include/c++/14/bits/uses_allocator.h \
-  /usr/include/c++/14/bits/uses_allocator_args.h \
-  /usr/include/c++/14/bits/utility.h \
-  /usr/include/c++/14/bits/vector.tcc \
-  /usr/include/c++/14/bits/version.h \
-  /usr/include/c++/14/concepts \
-  /usr/include/c++/14/cstddef \
-  /usr/include/c++/14/debug/assertions.h \
-  /usr/include/c++/14/debug/debug.h \
-  /usr/include/c++/14/ext/alloc_traits.h \
-  /usr/include/c++/14/ext/numeric_traits.h \
-  /usr/include/c++/14/ext/type_traits.h \
-  /usr/include/c++/14/initializer_list \
-  /usr/include/c++/14/new \
-  /usr/include/c++/14/pstl/pstl_config.h \
-  /usr/include/c++/14/tuple \
-  /usr/include/c++/14/type_traits \
-  /usr/include/c++/14/vector \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h
-
 CMakeFiles/yoo0.dir/src/Gun.cpp.o: /home/mirak/Documents/yoo0/src/Gun.cpp \
   /home/mirak/Documents/yoo0/include/Bullet.h \
   /home/mirak/Documents/yoo0/include/Gun.h \
@@ -855,18 +785,96 @@ CMakeFiles/yoo0.dir/src/Red.cpp.o: /home/mirak/Documents/yoo0/src/Red.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h
 
+CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o: /home/mirak/Documents/yoo0/src/Sandbox2D.cpp \
+  /home/mirak/Documents/yoo0/include/Sandbox2D.h \
+  /home/mirak/Documents/yoo0/include/Scene.h \
+  /home/mirak/Documents/yoo0/raylib/include/raylib.h \
+  /usr/include/stdc-predef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h
+
+CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o: /home/mirak/Documents/yoo0/src/Sandbox3D.cpp \
+  /home/mirak/Documents/yoo0/include/Player3D.h \
+  /home/mirak/Documents/yoo0/include/Sandbox3D.h \
+  /home/mirak/Documents/yoo0/include/Scene.h \
+  /home/mirak/Documents/yoo0/raylib/include/raylib.h \
+  /usr/include/c++/14/backward/binders.h \
+  /usr/include/c++/14/bit \
+  /usr/include/c++/14/bits/alloc_traits.h \
+  /usr/include/c++/14/bits/allocator.h \
+  /usr/include/c++/14/bits/concept_check.h \
+  /usr/include/c++/14/bits/cpp_type_traits.h \
+  /usr/include/c++/14/bits/exception.h \
+  /usr/include/c++/14/bits/exception_defines.h \
+  /usr/include/c++/14/bits/functexcept.h \
+  /usr/include/c++/14/bits/functional_hash.h \
+  /usr/include/c++/14/bits/hash_bytes.h \
+  /usr/include/c++/14/bits/invoke.h \
+  /usr/include/c++/14/bits/memory_resource.h \
+  /usr/include/c++/14/bits/memoryfwd.h \
+  /usr/include/c++/14/bits/move.h \
+  /usr/include/c++/14/bits/new_allocator.h \
+  /usr/include/c++/14/bits/predefined_ops.h \
+  /usr/include/c++/14/bits/ptr_traits.h \
+  /usr/include/c++/14/bits/range_access.h \
+  /usr/include/c++/14/bits/refwrap.h \
+  /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/stl_algobase.h \
+  /usr/include/c++/14/bits/stl_bvector.h \
+  /usr/include/c++/14/bits/stl_construct.h \
+  /usr/include/c++/14/bits/stl_function.h \
+  /usr/include/c++/14/bits/stl_iterator.h \
+  /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/14/bits/stl_iterator_base_types.h \
+  /usr/include/c++/14/bits/stl_pair.h \
+  /usr/include/c++/14/bits/stl_uninitialized.h \
+  /usr/include/c++/14/bits/stl_vector.h \
+  /usr/include/c++/14/bits/uses_allocator.h \
+  /usr/include/c++/14/bits/uses_allocator_args.h \
+  /usr/include/c++/14/bits/utility.h \
+  /usr/include/c++/14/bits/vector.tcc \
+  /usr/include/c++/14/bits/version.h \
+  /usr/include/c++/14/concepts \
+  /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/debug/assertions.h \
+  /usr/include/c++/14/debug/debug.h \
+  /usr/include/c++/14/ext/alloc_traits.h \
+  /usr/include/c++/14/ext/numeric_traits.h \
+  /usr/include/c++/14/ext/type_traits.h \
+  /usr/include/c++/14/initializer_list \
+  /usr/include/c++/14/new \
+  /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/tuple \
+  /usr/include/c++/14/type_traits \
+  /usr/include/c++/14/vector \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h
+
 CMakeFiles/yoo0.dir/src/main.cpp.o: /home/mirak/Documents/yoo0/src/main.cpp \
   /home/mirak/Documents/yoo0/include/Bullet.h \
   /home/mirak/Documents/yoo0/include/Button.h \
   /home/mirak/Documents/yoo0/include/Death.h \
   /home/mirak/Documents/yoo0/include/Game2D.h \
-  /home/mirak/Documents/yoo0/include/Game3D.h \
   /home/mirak/Documents/yoo0/include/Green.h \
   /home/mirak/Documents/yoo0/include/Gun.h \
   /home/mirak/Documents/yoo0/include/Menu.h \
   /home/mirak/Documents/yoo0/include/Player2D.h \
   /home/mirak/Documents/yoo0/include/Player3D.h \
   /home/mirak/Documents/yoo0/include/Red.h \
+  /home/mirak/Documents/yoo0/include/Sandbox2D.h \
+  /home/mirak/Documents/yoo0/include/Sandbox3D.h \
   /home/mirak/Documents/yoo0/include/Scene.h \
   /home/mirak/Documents/yoo0/raylib/include/raylib.h \
   /usr/include/c++/14/backward/binders.h \
@@ -955,20 +963,21 @@ yoo0: /home/mirak/Documents/yoo0/raylib/lib/libraylib.a \
   CMakeFiles/yoo0.dir/src/Button.cpp.o \
   CMakeFiles/yoo0.dir/src/Death.cpp.o \
   CMakeFiles/yoo0.dir/src/Game2D.cpp.o \
-  CMakeFiles/yoo0.dir/src/Game3D.cpp.o \
   CMakeFiles/yoo0.dir/src/Gun.cpp.o \
   CMakeFiles/yoo0.dir/src/Menu.cpp.o \
   CMakeFiles/yoo0.dir/src/Player2D.cpp.o \
   CMakeFiles/yoo0.dir/src/Player3D.cpp.o \
   CMakeFiles/yoo0.dir/src/Red.cpp.o \
+  CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o \
+  CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o \
   CMakeFiles/yoo0.dir/src/main.cpp.o
 
+
+CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o:
 
 CMakeFiles/yoo0.dir/src/Player3D.cpp.o:
 
 CMakeFiles/yoo0.dir/src/Menu.cpp.o:
-
-CMakeFiles/yoo0.dir/src/Game3D.cpp.o:
 
 CMakeFiles/yoo0.dir/src/Game2D.cpp.o:
 
@@ -992,9 +1001,11 @@ CMakeFiles/yoo0.dir/src/Bullet.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/crti.o:
 
-/lib64/ld-linux-x86-64.so.2:
-
 /lib/x86_64-linux-gnu/libc.so.6:
+
+/home/mirak/Documents/yoo0/raylib/lib/libraylib.a:
+
+/home/mirak/Documents/yoo0/src/main.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
@@ -1092,8 +1103,6 @@ CMakeFiles/yoo0.dir/src/Red.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/14/tr1/gamma.tcc:
@@ -1117,8 +1126,6 @@ CMakeFiles/yoo0.dir/src/Red.cpp.o:
 /usr/lib/linux/uapi/x86/asm/posix_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-/home/mirak/Documents/yoo0/src/Game3D.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
@@ -1236,8 +1243,6 @@ CMakeFiles/yoo0.dir/src/Gun.cpp.o:
 
 /home/mirak/Documents/yoo0/src/Menu.cpp:
 
-/home/mirak/Documents/yoo0/raylib/lib/libraylib.a:
-
 /home/mirak/Documents/yoo0/include/Player2D.h:
 
 /usr/include/c++/14/bits/string_view.tcc:
@@ -1264,11 +1269,7 @@ CMakeFiles/yoo0.dir/src/Gun.cpp.o:
 
 /usr/include/c++/14/limits:
 
-/usr/include/c++/14/tr1/modified_bessel_func.tcc:
-
 /usr/include/features.h:
-
-/home/mirak/Documents/yoo0/src/main.cpp:
 
 /usr/include/c++/14/tr1/poly_laguerre.tcc:
 
@@ -1448,6 +1449,8 @@ CMakeFiles/yoo0.dir/src/Player2D.cpp.o:
 
 /usr/include/c++/14/new:
 
+CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o:
+
 /usr/include/linux/stddef.h:
 
 /usr/include/c++/14/string:
@@ -1471,6 +1474,10 @@ CMakeFiles/yoo0.dir/src/Player2D.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/lib/linux/uapi/x86/asm/posix_types_64.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/home/mirak/Documents/yoo0/include/Sandbox3D.h:
 
 /usr/include/wctype.h:
 
@@ -1528,6 +1535,14 @@ CMakeFiles/yoo0.dir/src/Player2D.cpp.o:
 
 /usr/lib/linux/uapi/x86/asm/bitsperlong.h:
 
-/home/mirak/Documents/yoo0/include/Game3D.h:
-
 /home/mirak/Documents/yoo0/include/Player3D.h:
+
+/usr/include/c++/14/tr1/modified_bessel_func.tcc:
+
+/home/mirak/Documents/yoo0/src/Sandbox2D.cpp:
+
+/lib64/ld-linux-x86-64.so.2:
+
+/home/mirak/Documents/yoo0/include/Sandbox2D.h:
+
+/home/mirak/Documents/yoo0/src/Sandbox3D.cpp:

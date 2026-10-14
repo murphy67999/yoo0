@@ -6,9 +6,9 @@
 #include "Player3D.h"
 #include "Scene.h"
 
-struct Game3D{
+struct Sandbox3D{
     Player3D player;
-    Shader shader = LoadShader(0, "shaders/example.fs");
+    Shader gradient = LoadShader(0, "shaders/gradient.frag");
 
     void update(Scene& currentScene);
     void draw();

@@ -1,9 +1,9 @@
-#include "Game3D.h"
+#include "Sandbox3D.h"
 
 #include "raylib.h"
 #include "Scene.h"
 
-void Game3D::update(Scene& currentScene){
+void Sandbox3D::update(Scene& currentScene){
     player.update();
 
     if (IsKeyPressed(KEY_Z)){
@@ -12,19 +12,17 @@ void Game3D::update(Scene& currentScene){
     }
 }
 
-void Game3D::draw(){
+void Sandbox3D::draw(){
     ClearBackground(DARKGRAY);
 
     BeginMode3D(player.camera);
 
-    BeginShaderMode(shader);
-
+    BeginShaderMode(gradient);
     DrawCube(
         {0.0f, 0.0f, 0.0f}, 
         0.5f, 0.5f, 0.5f,
         WHITE
     );
-
     EndShaderMode();
 
     DrawGrid(100, 0.5f);

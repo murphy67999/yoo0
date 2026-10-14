@@ -3,7 +3,8 @@
 enum Scene{
     MENU,
     GAME_2D,
-    GAME_3D,
+    SANDBOX_2D,
+    SANDBOX_3D,
     DEATH,
     EXIT
 };

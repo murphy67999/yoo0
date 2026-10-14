@@ -6,17 +6,20 @@
 #include "Bullet.h"
 
 struct Gun{
-	float radius = 20.0f;
-	Color color = BLACK;
-	float reloadTime = 1.0f;
-	float reloadTimer = 0.0f;
-	bool canShoot = true;
-
-	Vector2 pos;
-
-	void update(Vector2 pos1, Vector2 targetPos);
-	void shoot(Vector2 target, std::vector<Bullet>& bullets);
+	void update(Vector2 pos, Vector2 targetPos);
+	Bullet shoot(Vector2 target);
+	bool canShoot() const;
+	Vector2 getPos() const;
+	float getRadius() const;
+	Color getColor() const;
 
 private:
+	Vector2 m_pos;
+	bool m_canShoot = true;
+	float m_radius = 20.0f;
+	Color m_color = BLACK;
+	float m_reloadTime = 1.0f;
+	float m_reloadTimer = 0.0f;
+
 	void reload();
 };

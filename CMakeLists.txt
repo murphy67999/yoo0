@@ -14,8 +14,9 @@ add_executable(yoo0
 	src/Menu.cpp
 	src/Button.cpp
 	src/Death.cpp
-	src/Game3D.cpp
+	src/Sandbox3D.cpp
 	src/Player3D.cpp
+	src/Sandbox2D.cpp
 )
 
 target_include_directories(yoo0 PRIVATE

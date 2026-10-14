@@ -10,24 +10,24 @@
 #include "Scene.h"
 
 struct Game2D{
-	Player2D player2D;
-
-	std::vector<Bullet> bullets;
-	std::vector<Red> redEnemies;
-	std::vector<Green> greenEnemies;
-
-	float timer = 0.0f;
-
 	Game2D();
-	void update(Scene& currentScene);
-	void draw();
+	void run(Scene& currentScene);
 
 private:
+	Player2D m_player;
+	std::vector<Bullet> m_bullets;
+	std::vector<Red> m_redEnemies;
+	std::vector<Green> m_greenEnemies;
+	float m_timer = 0.0f;
+
+	void update(Scene& currentScene);
+	void draw() const;
+	void drawFPS() const;
 	void updateBullets();
 	void updateEnemies();
 	void handleEnemySpawning();
-	bool isPlayerHit();
 	void handleEnemyHits();
+	bool isPlayerHit() const;
 	void removeDeadObjects();
 	void reset();
 };

@@ -225,30 +225,6 @@ src/Game2D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game2D.cpp.s
 .PHONY : src/Game2D.cpp.s
 
-src/Game3D.o: src/Game3D.cpp.o
-.PHONY : src/Game3D.o
-
-# target to build an object file
-src/Game3D.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game3D.cpp.o
-.PHONY : src/Game3D.cpp.o
-
-src/Game3D.i: src/Game3D.cpp.i
-.PHONY : src/Game3D.i
-
-# target to preprocess a source file
-src/Game3D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game3D.cpp.i
-.PHONY : src/Game3D.cpp.i
-
-src/Game3D.s: src/Game3D.cpp.s
-.PHONY : src/Game3D.s
-
-# target to generate assembly for a file
-src/Game3D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game3D.cpp.s
-.PHONY : src/Game3D.cpp.s
-
 src/Gun.o: src/Gun.cpp.o
 .PHONY : src/Gun.o
 
@@ -369,6 +345,54 @@ src/Red.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Red.cpp.s
 .PHONY : src/Red.cpp.s
 
+src/Sandbox2D.o: src/Sandbox2D.cpp.o
+.PHONY : src/Sandbox2D.o
+
+# target to build an object file
+src/Sandbox2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.o
+.PHONY : src/Sandbox2D.cpp.o
+
+src/Sandbox2D.i: src/Sandbox2D.cpp.i
+.PHONY : src/Sandbox2D.i
+
+# target to preprocess a source file
+src/Sandbox2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.i
+.PHONY : src/Sandbox2D.cpp.i
+
+src/Sandbox2D.s: src/Sandbox2D.cpp.s
+.PHONY : src/Sandbox2D.s
+
+# target to generate assembly for a file
+src/Sandbox2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Sandbox2D.cpp.s
+.PHONY : src/Sandbox2D.cpp.s
+
+src/Sandbox3D.o: src/Sandbox3D.cpp.o
+.PHONY : src/Sandbox3D.o
+
+# target to build an object file
+src/Sandbox3D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o
+.PHONY : src/Sandbox3D.cpp.o
+
+src/Sandbox3D.i: src/Sandbox3D.cpp.i
+.PHONY : src/Sandbox3D.i
+
+# target to preprocess a source file
+src/Sandbox3D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.i
+.PHONY : src/Sandbox3D.cpp.i
+
+src/Sandbox3D.s: src/Sandbox3D.cpp.s
+.PHONY : src/Sandbox3D.s
+
+# target to generate assembly for a file
+src/Sandbox3D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.s
+.PHONY : src/Sandbox3D.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -414,9 +438,6 @@ help:
 	@echo "... src/Game2D.o"
 	@echo "... src/Game2D.i"
 	@echo "... src/Game2D.s"
-	@echo "... src/Game3D.o"
-	@echo "... src/Game3D.i"
-	@echo "... src/Game3D.s"
 	@echo "... src/Gun.o"
 	@echo "... src/Gun.i"
 	@echo "... src/Gun.s"
@@ -432,6 +453,12 @@ help:
 	@echo "... src/Red.o"
 	@echo "... src/Red.i"
 	@echo "... src/Red.s"
+	@echo "... src/Sandbox2D.o"
+	@echo "... src/Sandbox2D.i"
+	@echo "... src/Sandbox2D.s"
+	@echo "... src/Sandbox3D.o"
+	@echo "... src/Sandbox3D.i"
+	@echo "... src/Sandbox3D.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

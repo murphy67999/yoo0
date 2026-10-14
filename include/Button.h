@@ -11,11 +11,11 @@ struct Button{
     Color textColor;
 
     Button(Vector2 pos, Vector2 size, Color color, const char* text, int fontSize, Color fontColor);
-    bool isButtonClicked();
-    void draw();
+    bool isButtonClicked() const;
+    void draw() const;
 
 private:
-    Rectangle getRec();
-    int getTextPosX();
-    int getTextPosY();
+    Rectangle getRec() const;
+    int getTextPosX() const;
+    int getTextPosY() const;
 };

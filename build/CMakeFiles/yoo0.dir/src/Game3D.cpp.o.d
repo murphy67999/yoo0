@@ -1,6 +1,6 @@
-CMakeFiles/yoo0.dir/src/Game3D.cpp.o: \
- /home/mirak/Documents/yoo0/src/Game3D.cpp /usr/include/stdc-predef.h \
- /home/mirak/Documents/yoo0/include/Game3D.h \
+CMakeFiles/yoo0.dir/src/Sandbox3D.cpp.o: \
+ /home/mirak/Documents/yoo0/src/Sandbox3D.cpp /usr/include/stdc-predef.h \
+ /home/mirak/Documents/yoo0/include/Sandbox3D.h \
  /home/mirak/Documents/yoo0/raylib/include/raylib.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
  /usr/include/c++/14/vector /usr/include/c++/14/bits/requires_hosted.h \

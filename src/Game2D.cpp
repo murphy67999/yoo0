@@ -7,18 +7,25 @@
 #include "Scene.h"
 
 Game2D::Game2D(){
-	player2D.gun = Gun();
+	m_player.gun = Gun();
+}
+
+void Game2D::run(Scene& currentScene){
+	update(currentScene);
+	draw();
 }
 
 void Game2D::update(Scene& currentScene){
-	player2D.update();
-	player2D.gun.update(player2D.pos, GetMousePosition());
+	m_player.update();
+	m_player.gun.update(m_player.pos, GetMousePosition());
 
 	updateBullets();
 	updateEnemies();
 
 	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
-		player2D.gun.shoot(GetMousePosition(), bullets);
+		if (m_player.gun.canShoot()){
+			m_bullets.push_back(m_player.gun.shoot(GetMousePosition()));
+		}
 	}
 
 	if (isPlayerHit()){
@@ -36,49 +43,55 @@ void Game2D::update(Scene& currentScene){
 	removeDeadObjects();
 }
 
-void Game2D::draw(){
+void Game2D::draw() const{
 	ClearBackground(DARKGRAY);
 
-	DrawCircleV(player2D.pos, player2D.radius, player2D.color);
-	DrawCircleV(player2D.gun.pos, player2D.gun.radius, player2D.gun.color);
+	DrawCircleV(m_player.pos, m_player.radius, m_player.color);
+	DrawCircleV(m_player.gun.getPos(), m_player.gun.getRadius(), m_player.gun.getColor());
 
-	for (Bullet bullet : bullets){
-		DrawCircleV(bullet.pos, bullet.radius, bullet.color);
+	for (Bullet bullet : m_bullets){
+		bullet.draw();
 	}
 
-	for (Red red : redEnemies){
+	for (Red red : m_redEnemies){
 		DrawCircleV(red.pos, red.radius, red.color);
 	}
 
-	for (Green green : greenEnemies){
+	for (Green green : m_greenEnemies){
 		DrawCircleV(green.pos, green.radius, green.color);
-		DrawCircleV(green.gun.pos, green.gun.radius, green.gun.color);
+		DrawCircleV(green.gun.getPos(), green.gun.getRadius(), green.gun.getColor());
 	}
 
+	drawFPS();
+}
+
+void Game2D::drawFPS() const{
 	int fps = GetFPS();
     DrawText(TextFormat("FPS %d", fps), 10, 10, 50, RAYWHITE);
 }
 
 void Game2D::updateBullets(){
-	for (Bullet& bullet : bullets){
+	for (Bullet& bullet : m_bullets){
 		bullet.update();
 	}
 }
 
 void Game2D::updateEnemies(){
-	for (Red& red : redEnemies){
-		red.update(player2D.pos);
+	for (Red& red : m_redEnemies){
+		red.update(m_player.pos);
 	}
-	for (Green& green : greenEnemies){
-		green.gun.update(green.pos, player2D.pos);
-		green.gun.shoot(player2D.pos, bullets);
+	for (Green& green : m_greenEnemies){
+		green.gun.update(green.pos, m_player.pos);
+		if (green.gun.canShoot()){
+			m_bullets.push_back(green.gun.shoot(m_player.pos));
+		}
 	}
 }
 
 void Game2D::handleEnemySpawning(){
-	timer += GetFrameTime();
-	if (timer >= 2.0f){
-		timer = 0.0f;
+	m_timer += GetFrameTime();
+	if (m_timer >= 2.0f){
+		m_timer = 0.0f;
 		
 		int random = GetRandomValue(1, 2);
 
@@ -89,7 +102,7 @@ void Game2D::handleEnemySpawning(){
 					static_cast<float>(GetRandomValue(0, GetScreenWidth())),
 					static_cast<float>(GetRandomValue(0, GetScreenHeight())),					
 				};
-				redEnemies.push_back(red);
+				m_redEnemies.push_back(red);
 				break;
 			}
 
@@ -100,44 +113,19 @@ void Game2D::handleEnemySpawning(){
 					static_cast<float>(GetRandomValue(0, GetScreenHeight())),					
 				};
 				green.gun = Gun();
-				greenEnemies.push_back(green);
+				m_greenEnemies.push_back(green);
 				break;				
 			}
 		}
 	}
 }
 
-bool Game2D::isPlayerHit(){
-	for (Bullet& Bullet : bullets){
-		if (CheckCollisionCircles(
-			player2D.pos, player2D.radius,
-			Bullet.pos, Bullet.radius
-		)){
-			return true;
-		}
-	}
-
-	for (const Red& red : redEnemies){
-		if (CheckCollisionCircles(
-			player2D.pos, player2D.radius,
-			red.pos, red.radius
-		)){
-			return true;
-		}
-	}
-
-	return false;
-}
-
 void Game2D::handleEnemyHits(){
-	for (Bullet& bullet : bullets){
+	for (Bullet& bullet : m_bullets){
 		if (!bullet.isAlive) continue;
 
-		for (Red& red : redEnemies){
-			if (CheckCollisionCircles(
-				bullet.pos, bullet.radius,
-				red.pos, red.radius
-				)){
+		for (Red& red : m_redEnemies){
+			if (bullet.checkHit(red.pos, red.radius)){
 				bullet.isAlive = false;
 				red.isAlive = false;
 
@@ -145,11 +133,8 @@ void Game2D::handleEnemyHits(){
 			}
 		}
 
-		for (Green& green : greenEnemies){
-			if (CheckCollisionCircles(
-				bullet.pos, bullet.radius,
-				green.pos, green.radius
-				)){
+		for (Green& green : m_greenEnemies){
+			if (bullet.checkHit(green.pos, green.radius)){
 				bullet.isAlive = false;
 				green.isAlive = false;
 
@@ -159,28 +144,49 @@ void Game2D::handleEnemyHits(){
 	}
 }
 
+bool Game2D::isPlayerHit() const{
+	for (const Bullet& bullet : m_bullets){
+		if (bullet.checkHit(m_player.pos, m_player.radius)){
+			return true;
+		}
+		
+	}
+
+	for (const Red& red : m_redEnemies){
+		if (CheckCollisionCircles(
+			m_player.pos, m_player.radius,
+			red.pos, red.radius
+		)){
+			return true;
+		}
+	}
+
+	return false;
+}
+
+
 void Game2D::removeDeadObjects(){
-	for (int i = bullets.size() - 1; i >= 0; i--){
-		if (!bullets[i].isAlive){
-			bullets.erase(bullets.begin() + i);
+	for (int i = m_bullets.size() - 1; i >= 0; i--){
+		if (!m_bullets[i].isAlive){
+			m_bullets.erase(m_bullets.begin() + i);
 		}
 	}
-	for (int i = redEnemies.size() - 1; i >= 0; i--){
-		if (!redEnemies[i].isAlive){
-			redEnemies.erase(redEnemies.begin() + i);
+	for (int i = m_redEnemies.size() - 1; i >= 0; i--){
+		if (!m_redEnemies[i].isAlive){
+			m_redEnemies.erase(m_redEnemies.begin() + i);
 		}
 	}
-	for (int i = greenEnemies.size() - 1; i >= 0; i--){
-		if (!greenEnemies[i].isAlive){
-			greenEnemies.erase(greenEnemies.begin() + i);
+	for (int i = m_greenEnemies.size() - 1; i >= 0; i--){
+		if (!m_greenEnemies[i].isAlive){
+			m_greenEnemies.erase(m_greenEnemies.begin() + i);
 		}
 	}
 }
 
 void Game2D::reset(){
-	bullets.clear();
-	redEnemies.clear();
-	greenEnemies.clear();
+	m_bullets.clear();
+	m_redEnemies.clear();
+	m_greenEnemies.clear();
 
-	player2D.pos = player2D.spawnPos;
+	m_player.pos = m_player.spawnPos;
 }

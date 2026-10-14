@@ -15,10 +15,11 @@ void Player3D::update(){
     float moveSpeed = speed * GetFrameTime();
 
     Vector3 forward = {
-        sinf(yaw),
-        0.0f,
-        cosf(yaw)
+        cosf(pitch) * sinf(yaw),
+        sinf(pitch),
+        cosf(pitch) * cosf(yaw)
     };
+
     Vector3 right = {
         -cosf(yaw),
         0.0f,
@@ -27,11 +28,13 @@ void Player3D::update(){
 
     if (IsKeyDown(KEY_W)) {
         camera.position.x += forward.x * moveSpeed;
+        camera.position.y += forward.y * moveSpeed;
         camera.position.z += forward.z * moveSpeed;
     }
 
     if (IsKeyDown(KEY_S)) {
         camera.position.x -= forward.x * moveSpeed;
+        camera.position.y -= forward.y * moveSpeed;
         camera.position.z -= forward.z * moveSpeed;
     }
 
