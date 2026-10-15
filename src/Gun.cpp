@@ -48,3 +48,7 @@ void Gun::reload(){
 		m_reloadTimer = 0.0f;
 	}
 }
+
+void Gun::draw() const{
+	DrawCircleV(m_pos, m_radius, m_color);
+}

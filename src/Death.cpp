@@ -2,33 +2,38 @@
 #include "Scene.h"
 
 Death::Death():
-restart(
-    {GetScreenWidth() / 2.0f - 150, GetScreenHeight() / 2.0f - 50.0f},
+m_restart(
+    {GetScreenWidth() / 2.0f - 150, 500.0f},
     {300, 100},
     {52, 58, 64, 255},
     "RESTART", 50, RAYWHITE
 ),
-menu(
-    {GetScreenWidth() / 2.0f - 150, (GetScreenHeight() / 2.0f - 50.0f) + 150.0f},
+m_menu(
+    {GetScreenWidth() / 2.0f - 150, 650.0f},
     {300, 100},
     {52, 58, 64, 255},
     "MENU", 50, RAYWHITE
 )
 {}
 
-void Death::update(Scene& currentScene){
-    if (restart.isButtonClicked()){
+void Death::run(Scene& currentScene) const{
+    update(currentScene);
+    draw();
+}
+
+void Death::update(Scene& currentScene) const{
+    if (m_restart.isButtonClicked()){
         currentScene = GAME_2D;
     }
 
-    if (menu.isButtonClicked()){
+    if (m_menu.isButtonClicked()){
         currentScene = MENU;
     }
 }
 
-void Death::draw(){
-    ClearBackground({232, 224, 240, 255});
+void Death::draw() const{
+    ClearBackground(m_backgroundColor);
 
-    restart.draw();
-    menu.draw();
+    m_restart.draw();
+    m_menu.draw();
 }

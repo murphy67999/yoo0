@@ -3,8 +3,13 @@
 #include "raylib.h"
 #include "Scene.h"
 
+void Sandbox3D::run(Scene& currentScene){
+    update(currentScene);
+    draw();
+}
+
 void Sandbox3D::update(Scene& currentScene){
-    player.update();
+    m_player.update();
 
     if (IsKeyPressed(KEY_Z)){
         EnableCursor();
@@ -12,12 +17,12 @@ void Sandbox3D::update(Scene& currentScene){
     }
 }
 
-void Sandbox3D::draw(){
+void Sandbox3D::draw() const{
     ClearBackground(DARKGRAY);
 
-    BeginMode3D(player.camera);
+    BeginMode3D(m_player.getCamera());
 
-    BeginShaderMode(gradient);
+    BeginShaderMode(m_gradient);
     DrawCube(
         {0.0f, 0.0f, 0.0f}, 
         0.5f, 0.5f, 0.5f,
@@ -28,7 +33,4 @@ void Sandbox3D::draw(){
     DrawGrid(100, 0.5f);
 
     EndMode3D();
-    
-    int fps = GetFPS();
-    DrawText(TextFormat("FPS %d", fps), 10, 10, 50, RAYWHITE);
 }

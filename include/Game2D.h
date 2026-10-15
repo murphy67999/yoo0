@@ -10,10 +10,10 @@
 #include "Scene.h"
 
 struct Game2D{
-	Game2D();
 	void run(Scene& currentScene);
 
 private:
+	static constexpr Color m_backgroundColor = DARKBROWN;
 	Player2D m_player;
 	std::vector<Bullet> m_bullets;
 	std::vector<Red> m_redEnemies;
@@ -22,7 +22,6 @@ private:
 
 	void update(Scene& currentScene);
 	void draw() const;
-	void drawFPS() const;
 	void updateBullets();
 	void updateEnemies();
 	void handleEnemySpawning();

@@ -6,10 +6,6 @@
 #include "Gun.h"
 #include "Scene.h"
 
-Game2D::Game2D(){
-	m_player.gun = Gun();
-}
-
 void Game2D::run(Scene& currentScene){
 	update(currentScene);
 	draw();
@@ -17,7 +13,6 @@ void Game2D::run(Scene& currentScene){
 
 void Game2D::update(Scene& currentScene){
 	m_player.update();
-	m_player.gun.update(m_player.pos, GetMousePosition());
 
 	updateBullets();
 	updateEnemies();
@@ -44,30 +39,21 @@ void Game2D::update(Scene& currentScene){
 }
 
 void Game2D::draw() const{
-	ClearBackground(DARKGRAY);
+	ClearBackground(m_backgroundColor);
 
-	DrawCircleV(m_player.pos, m_player.radius, m_player.color);
-	DrawCircleV(m_player.gun.getPos(), m_player.gun.getRadius(), m_player.gun.getColor());
+	m_player.draw();
 
 	for (Bullet bullet : m_bullets){
 		bullet.draw();
 	}
 
 	for (Red red : m_redEnemies){
-		DrawCircleV(red.pos, red.radius, red.color);
+		red.draw();
 	}
 
 	for (Green green : m_greenEnemies){
-		DrawCircleV(green.pos, green.radius, green.color);
-		DrawCircleV(green.gun.getPos(), green.gun.getRadius(), green.gun.getColor());
+		green.draw();
 	}
-
-	drawFPS();
-}
-
-void Game2D::drawFPS() const{
-	int fps = GetFPS();
-    DrawText(TextFormat("FPS %d", fps), 10, 10, 50, RAYWHITE);
 }
 
 void Game2D::updateBullets(){
@@ -78,12 +64,12 @@ void Game2D::updateBullets(){
 
 void Game2D::updateEnemies(){
 	for (Red& red : m_redEnemies){
-		red.update(m_player.pos);
+		red.update(m_player.getPos());
 	}
 	for (Green& green : m_greenEnemies){
-		green.gun.update(green.pos, m_player.pos);
+		green.gun.update(green.getPos(), m_player.getPos());
 		if (green.gun.canShoot()){
-			m_bullets.push_back(green.gun.shoot(m_player.pos));
+			m_bullets.push_back(green.gun.shoot(m_player.getPos()));
 		}
 	}
 }
@@ -97,23 +83,22 @@ void Game2D::handleEnemySpawning(){
 
 		switch (random){
 			case 1:{
-				Red red;
-				red.pos = {
-					static_cast<float>(GetRandomValue(0, GetScreenWidth())),
-					static_cast<float>(GetRandomValue(0, GetScreenHeight())),					
-				};
-				m_redEnemies.push_back(red);
+				m_redEnemies.emplace_back(
+					Vector2{
+						static_cast<float>(GetRandomValue(0, GetScreenWidth())),
+						static_cast<float>(GetRandomValue(0, GetScreenHeight()))
+					}
+				);
 				break;
 			}
 
 			case 2:{
-				Green green;
-				green.pos = {
-					static_cast<float>(GetRandomValue(0, GetScreenWidth())),
-					static_cast<float>(GetRandomValue(0, GetScreenHeight())),					
-				};
-				green.gun = Gun();
-				m_greenEnemies.push_back(green);
+				m_greenEnemies.emplace_back(
+					Vector2{
+						static_cast<float>(GetRandomValue(0, GetScreenWidth())),
+						static_cast<float>(GetRandomValue(0, GetScreenHeight()))
+					}
+				);
 				break;				
 			}
 		}
@@ -125,7 +110,7 @@ void Game2D::handleEnemyHits(){
 		if (!bullet.isAlive) continue;
 
 		for (Red& red : m_redEnemies){
-			if (bullet.checkHit(red.pos, red.radius)){
+			if (bullet.checkHit(red.getPos(), red.getRadius())){
 				bullet.isAlive = false;
 				red.isAlive = false;
 
@@ -134,7 +119,7 @@ void Game2D::handleEnemyHits(){
 		}
 
 		for (Green& green : m_greenEnemies){
-			if (bullet.checkHit(green.pos, green.radius)){
+			if (bullet.checkHit(green.getPos(), green.getRadius())){
 				bullet.isAlive = false;
 				green.isAlive = false;
 
@@ -146,7 +131,7 @@ void Game2D::handleEnemyHits(){
 
 bool Game2D::isPlayerHit() const{
 	for (const Bullet& bullet : m_bullets){
-		if (bullet.checkHit(m_player.pos, m_player.radius)){
+		if (bullet.checkHit(m_player.getPos(), m_player.getRadius())){
 			return true;
 		}
 		
@@ -154,8 +139,8 @@ bool Game2D::isPlayerHit() const{
 
 	for (const Red& red : m_redEnemies){
 		if (CheckCollisionCircles(
-			m_player.pos, m_player.radius,
-			red.pos, red.radius
+			m_player.getPos(), m_player.getRadius(),
+			red.getPos(), red.getRadius()
 		)){
 			return true;
 		}
@@ -188,5 +173,5 @@ void Game2D::reset(){
 	m_redEnemies.clear();
 	m_greenEnemies.clear();
 
-	m_player.pos = m_player.spawnPos;
+	m_player.reset();
 }

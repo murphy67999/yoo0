@@ -5,8 +5,12 @@
 #include "Scene.h"
 
 struct Sandbox2D{
-    Shader gradient = LoadShader(0, "shaders/gradient.frag");
+    void run(Scene& currentScene) const;
 
-    void update(Scene& currentScene);
-    void draw();
+private:
+    static constexpr Color m_backgroundColor = PURPLE;
+    const Shader m_gradient = LoadShader(0, "shaders/gradient.frag");
+
+    void update(Scene& currentScene) const;
+    void draw() const;
 };

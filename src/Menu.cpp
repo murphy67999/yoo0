@@ -53,7 +53,7 @@ void Menu::update(Scene& currentScene) const{
 }
 
 void Menu::draw() const{
-    ClearBackground(PURPLE);
+    ClearBackground(m_backgroundColor);
 
     drawTitle();
     m_game2D.draw();

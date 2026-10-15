@@ -3,7 +3,7 @@
 #include "Button.h"
 
 Button::Button(Vector2 pos, Vector2 size, Color color, const char* text, int fontSize, Color textColor):
-pos(pos), size(size), color(color), text(text), fontSize(fontSize), textColor(textColor) {}
+m_pos(pos), m_size(size), m_color(color), m_text(text), m_fontSize(fontSize), m_textColor(textColor) {}
 
 
 bool Button::isButtonClicked() const{
@@ -13,26 +13,26 @@ bool Button::isButtonClicked() const{
 }
 
 void Button::draw() const{
-    DrawRectangleV(pos, size, color);
-    DrawText(text, getTextPosX(), getTextPosY(), fontSize, textColor);
+    DrawRectangleV(m_pos, m_size, m_color);
+    DrawText(m_text, getTextPosX(), getTextPosY(), m_fontSize, m_textColor);
 }
 
 Rectangle Button::getRec() const{
-    return {pos.x, pos.y, size.x, size.y};
+    return {m_pos.x, m_pos.y, m_size.x, m_size.y};
 }
 
 int Button::getTextPosX() const{
-    int width = MeasureText(text, fontSize);
+    int width = MeasureText(m_text, m_fontSize);
 
-    int emptySpace = size.x - width;
+    int emptySpace = m_size.x - width;
     int padding = emptySpace / 2;
     
-    return pos.x + padding;
+    return m_pos.x + padding;
 }
 
 int Button::getTextPosY() const{
-    int emptySpace = size.y - fontSize;
+    int emptySpace = m_size.y - m_fontSize;
     int padding = emptySpace / 2;
 
-    return pos.y + padding;
+    return m_pos.y + padding;
 }

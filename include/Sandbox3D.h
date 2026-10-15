@@ -7,9 +7,13 @@
 #include "Scene.h"
 
 struct Sandbox3D{
-    Player3D player;
-    Shader gradient = LoadShader(0, "shaders/gradient.frag");
+    void run(Scene& currentScene);
+
+private:
+    static constexpr Color m_backgroundColor = SKYBLUE;
+    Player3D m_player;
+    const Shader m_gradient = LoadShader(0, "shaders/gradient.frag");
 
     void update(Scene& currentScene);
-    void draw();
+    void draw() const;
 };

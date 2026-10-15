@@ -225,6 +225,30 @@ src/Game2D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Game2D.cpp.s
 .PHONY : src/Game2D.cpp.s
 
+src/Green.o: src/Green.cpp.o
+.PHONY : src/Green.o
+
+# target to build an object file
+src/Green.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Green.cpp.o
+.PHONY : src/Green.cpp.o
+
+src/Green.i: src/Green.cpp.i
+.PHONY : src/Green.i
+
+# target to preprocess a source file
+src/Green.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Green.cpp.i
+.PHONY : src/Green.cpp.i
+
+src/Green.s: src/Green.cpp.s
+.PHONY : src/Green.s
+
+# target to generate assembly for a file
+src/Green.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yoo0.dir/build.make CMakeFiles/yoo0.dir/src/Green.cpp.s
+.PHONY : src/Green.cpp.s
+
 src/Gun.o: src/Gun.cpp.o
 .PHONY : src/Gun.o
 
@@ -438,6 +462,9 @@ help:
 	@echo "... src/Game2D.o"
 	@echo "... src/Game2D.i"
 	@echo "... src/Game2D.s"
+	@echo "... src/Green.o"
+	@echo "... src/Green.i"
+	@echo "... src/Green.s"
 	@echo "... src/Gun.o"
 	@echo "... src/Gun.i"
 	@echo "... src/Gun.s"

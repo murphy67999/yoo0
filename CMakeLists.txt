@@ -17,6 +17,7 @@ add_executable(yoo0
 	src/Sandbox3D.cpp
 	src/Player3D.cpp
 	src/Sandbox2D.cpp
+	src/Green.cpp
 )
 
 target_include_directories(yoo0 PRIVATE

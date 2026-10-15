@@ -19,6 +19,9 @@ int main(){
 
 	while (running && !WindowShouldClose()){
 		BeginDrawing();
+		int fps = GetFPS();
+    	DrawText(TextFormat("FPS %d", fps), 10, 10, 50, RAYWHITE);
+
 		switch (currentScene){
 		case MENU:
 			menu.run(currentScene);
@@ -27,16 +30,13 @@ int main(){
 			game2D.run(currentScene);
 			break;
 		case SANDBOX_2D:
-			sandbox2D.update(currentScene);
-			sandbox2D.draw();
+			sandbox2D.run(currentScene);
 			break;
 		case SANDBOX_3D:
-			sandbox3D.update(currentScene);
-			sandbox3D.draw();
+			sandbox3D.run(currentScene);
 			break;
 		case DEATH:
-			death.update(currentScene);
-			death.draw();
+			death.run(currentScene);
 			break;
 		case EXIT:
 			running = false;

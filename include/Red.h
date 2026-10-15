@@ -3,12 +3,17 @@
 #include "raylib.h"
 
 struct Red{
-	float radius = 50.0f;
-	float speed = 250.0f;
 	bool isAlive = true;
-	Color color = RED;
 
-	Vector2 pos;
+	Red(Vector2 pos);
+	void update(Vector2 target);
+	void draw() const;
+	Vector2 getPos() const;
+	float getRadius() const;
 
-	void update(Vector2 playerPos);
+private:
+	static constexpr float m_radius = 50.0f;
+	static constexpr float m_speed = 250.0f;
+	static constexpr Color m_color = RED;
+	Vector2 m_pos;
 };

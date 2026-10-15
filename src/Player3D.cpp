@@ -6,59 +6,63 @@
 void Player3D::update(){
     Vector2 mouseDelta = GetMouseDelta();
 
-    yaw -= mouseDelta.x * sensitivity;
-    pitch -= mouseDelta.y * sensitivity;
+    m_yaw -= mouseDelta.x * m_sensitivity;
+    m_pitch -= mouseDelta.y * m_sensitivity;
 
-    if (pitch > 1.5f) pitch = 1.5f;
-    if (pitch < -1.5f) pitch = -1.5f;
+    if (m_pitch > 1.5f) m_pitch = 1.5f;
+    if (m_pitch < -1.5f) m_pitch = -1.5f;
 
-    float moveSpeed = speed * GetFrameTime();
+    float moveSpeed = m_speed * GetFrameTime();
 
     Vector3 forward = {
-        cosf(pitch) * sinf(yaw),
-        sinf(pitch),
-        cosf(pitch) * cosf(yaw)
+        cosf(m_pitch) * sinf(m_yaw),
+        sinf(m_pitch),
+        cosf(m_pitch) * cosf(m_yaw)
     };
 
     Vector3 right = {
-        -cosf(yaw),
+        -cosf(m_yaw),
         0.0f,
-        sinf(yaw)
+        sinf(m_yaw)
     };
 
     if (IsKeyDown(KEY_W)) {
-        camera.position.x += forward.x * moveSpeed;
-        camera.position.y += forward.y * moveSpeed;
-        camera.position.z += forward.z * moveSpeed;
+        m_camera.position.x += forward.x * moveSpeed;
+        m_camera.position.y += forward.y * moveSpeed;
+        m_camera.position.z += forward.z * moveSpeed;
     }
 
     if (IsKeyDown(KEY_S)) {
-        camera.position.x -= forward.x * moveSpeed;
-        camera.position.y -= forward.y * moveSpeed;
-        camera.position.z -= forward.z * moveSpeed;
+        m_camera.position.x -= forward.x * moveSpeed;
+        m_camera.position.y -= forward.y * moveSpeed;
+        m_camera.position.z -= forward.z * moveSpeed;
     }
 
     if (IsKeyDown(KEY_D)) {
-        camera.position.x += right.x * moveSpeed;
-        camera.position.z += right.z * moveSpeed;
+        m_camera.position.x += right.x * moveSpeed;
+        m_camera.position.z += right.z * moveSpeed;
     }
 
     if (IsKeyDown(KEY_A)) {
-        camera.position.x -= right.x * moveSpeed;
-        camera.position.z -= right.z * moveSpeed;
+        m_camera.position.x -= right.x * moveSpeed;
+        m_camera.position.z -= right.z * moveSpeed;
     }
 
     Vector3 direction = {
-        cosf(pitch) * sinf(yaw),
-        sinf(pitch),
-        cosf(pitch) * cosf(yaw)
+        cosf(m_pitch) * sinf(m_yaw),
+        sinf(m_pitch),
+        cosf(m_pitch) * cosf(m_yaw)
     };
 
-    camera.target = {
-        camera.position.x + direction.x,
-        camera.position.y + direction.y,
-        camera.position.z + direction.z
+    m_camera.target = {
+        m_camera.position.x + direction.x,
+        m_camera.position.y + direction.y,
+        m_camera.position.z + direction.z
     };
 
     DisableCursor();
+}
+
+Camera Player3D::getCamera() const{
+    return m_camera;
 }
